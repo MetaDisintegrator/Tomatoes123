@@ -1,0 +1,424 @@
+<mxfile host="app.diagrams.net" modified="2024-04-05T16:02:52.545Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.5735.289 Safari/537.36" etag="TX1bdFDF3IyhtlndXIel" version="24.2.2" type="device">
+  <diagram name="第 1 页" id="rUfabbWBfLY4oEphx8v-">
+    <mxGraphModel dx="3552" dy="980" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="XqKsK3HbnwIZBjqYY-Qo-3" value="角色卡" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="-1040" y="490" width="230" height="350" as="geometry" />
+        </mxCell>
+        <mxCell id="XqKsK3HbnwIZBjqYY-Qo-9" value="招募到角色的界(如人间)" style="text;align=center;fontStyle=1;verticalAlign=middle;spacingLeft=3;spacingRight=3;strokeColor=none;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;html=1;" parent="XqKsK3HbnwIZBjqYY-Qo-3" vertex="1">
+          <mxGeometry y="30" width="230" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="XqKsK3HbnwIZBjqYY-Qo-4" value="名字" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="XqKsK3HbnwIZBjqYY-Qo-3" vertex="1">
+          <mxGeometry y="56" width="230" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="XqKsK3HbnwIZBjqYY-Qo-10" value="模型图片" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="XqKsK3HbnwIZBjqYY-Qo-3" vertex="1">
+          <mxGeometry y="86" width="230" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="XqKsK3HbnwIZBjqYY-Qo-12" value="基础属性" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="XqKsK3HbnwIZBjqYY-Qo-3" vertex="1">
+          <mxGeometry y="112" width="230" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="XqKsK3HbnwIZBjqYY-Qo-13" value="&amp;nbsp;正常被动主动技能" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="XqKsK3HbnwIZBjqYY-Qo-3" vertex="1">
+          <mxGeometry y="138" width="230" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="XqKsK3HbnwIZBjqYY-Qo-8" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" parent="XqKsK3HbnwIZBjqYY-Qo-3" vertex="1">
+          <mxGeometry y="164" width="230" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="XqKsK3HbnwIZBjqYY-Qo-16" value="见过该角色化身的界(如魔界)" style="text;align=center;fontStyle=1;verticalAlign=middle;spacingLeft=3;spacingRight=3;strokeColor=none;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;html=1;" parent="XqKsK3HbnwIZBjqYY-Qo-3" vertex="1">
+          <mxGeometry y="172" width="230" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="XqKsK3HbnwIZBjqYY-Qo-5" value="同上" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="XqKsK3HbnwIZBjqYY-Qo-3" vertex="1">
+          <mxGeometry y="198" width="230" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="XqKsK3HbnwIZBjqYY-Qo-15" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" parent="XqKsK3HbnwIZBjqYY-Qo-3" vertex="1">
+          <mxGeometry y="228" width="230" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="XqKsK3HbnwIZBjqYY-Qo-17" value="没有让该角色去过的界(待解锁)" style="text;align=center;fontStyle=1;verticalAlign=middle;spacingLeft=3;spacingRight=3;strokeColor=none;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;html=1;" parent="XqKsK3HbnwIZBjqYY-Qo-3" vertex="1">
+          <mxGeometry y="236" width="230" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="XqKsK3HbnwIZBjqYY-Qo-6" value="？？？" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="XqKsK3HbnwIZBjqYY-Qo-3" vertex="1">
+          <mxGeometry y="262" width="230" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="XqKsK3HbnwIZBjqYY-Qo-29" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" parent="XqKsK3HbnwIZBjqYY-Qo-3" vertex="1">
+          <mxGeometry y="292" width="230" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="XqKsK3HbnwIZBjqYY-Qo-14" value="跃迁技能：在不同界跳跃前/后触发的效果（该技能固有，跟着角色走，不管是哪种化身）" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="XqKsK3HbnwIZBjqYY-Qo-3" vertex="1">
+          <mxGeometry y="300" width="230" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="XqKsK3HbnwIZBjqYY-Qo-20" value="战斗场景" style="swimlane;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="450" y="30" width="1070" height="550" as="geometry" />
+        </mxCell>
+        <mxCell id="XqKsK3HbnwIZBjqYY-Qo-21" value="界1" style="swimlane;whiteSpace=wrap;html=1;" parent="XqKsK3HbnwIZBjqYY-Qo-20" vertex="1">
+          <mxGeometry x="80" y="56" width="910" height="154" as="geometry" />
+        </mxCell>
+        <mxCell id="XqKsK3HbnwIZBjqYY-Qo-24" value="我方" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" parent="XqKsK3HbnwIZBjqYY-Qo-21" vertex="1">
+          <mxGeometry x="110" y="37" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="XqKsK3HbnwIZBjqYY-Qo-25" value="敌方" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" parent="XqKsK3HbnwIZBjqYY-Qo-21" vertex="1">
+          <mxGeometry x="730" y="44" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="XqKsK3HbnwIZBjqYY-Qo-22" value="界2" style="swimlane;whiteSpace=wrap;html=1;" parent="XqKsK3HbnwIZBjqYY-Qo-20" vertex="1">
+          <mxGeometry x="80" y="210" width="910" height="154" as="geometry" />
+        </mxCell>
+        <mxCell id="XqKsK3HbnwIZBjqYY-Qo-26" value="我方" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" parent="XqKsK3HbnwIZBjqYY-Qo-22" vertex="1">
+          <mxGeometry x="260" y="52" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="XqKsK3HbnwIZBjqYY-Qo-27" value="" style="endArrow=classic;html=1;rounded=0;" parent="XqKsK3HbnwIZBjqYY-Qo-22" source="XqKsK3HbnwIZBjqYY-Qo-26" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="520" y="110" as="sourcePoint" />
+            <mxPoint x="490" y="-50" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="XqKsK3HbnwIZBjqYY-Qo-28" value="默认只有我方胜利时，可以进行跃迁。&lt;br&gt;跃迁以角色为最小单位，默认每个角色每场战斗只能跃迁一次。&lt;br&gt;跃迁即协助其他界战斗。（也可以不跃迁，依靠其他手段助战别的界）&lt;br&gt;拖动以跃迁，鼠标指针会显示跃迁后的化身(未解锁则显示“？”)" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="XqKsK3HbnwIZBjqYY-Qo-22" vertex="1">
+          <mxGeometry x="490" y="34" width="370" height="98" as="geometry" />
+        </mxCell>
+        <mxCell id="XqKsK3HbnwIZBjqYY-Qo-23" value="界3" style="swimlane;whiteSpace=wrap;html=1;" parent="XqKsK3HbnwIZBjqYY-Qo-20" vertex="1">
+          <mxGeometry x="80" y="364" width="910" height="154" as="geometry" />
+        </mxCell>
+        <mxCell id="XqKsK3HbnwIZBjqYY-Qo-30" value="敌方" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" parent="XqKsK3HbnwIZBjqYY-Qo-23" vertex="1">
+          <mxGeometry x="400" y="56" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="XqKsK3HbnwIZBjqYY-Qo-35" value="敌方胜出时，我方不会判负。&lt;br&gt;若战斗结束敌方仍未被消灭，则该界对应的战斗奖励不能获取。且该界中的我方角色死亡。&lt;br&gt;战斗结束时敌方被消灭，奖励可以获取，该界我方阵亡角色为濒死状态。" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="XqKsK3HbnwIZBjqYY-Qo-23" vertex="1">
+          <mxGeometry x="520" y="36" width="320" height="88" as="geometry" />
+        </mxCell>
+        <mxCell id="XqKsK3HbnwIZBjqYY-Qo-84" value="战斗完整流程" style="swimlane;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="360" y="650" width="1200" height="1185" as="geometry" />
+        </mxCell>
+        <mxCell id="XqKsK3HbnwIZBjqYY-Qo-56" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="XqKsK3HbnwIZBjqYY-Qo-84" source="XqKsK3HbnwIZBjqYY-Qo-36" target="XqKsK3HbnwIZBjqYY-Qo-37" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="XqKsK3HbnwIZBjqYY-Qo-36" value="战前布阵" style="rounded=0;whiteSpace=wrap;html=1;" parent="XqKsK3HbnwIZBjqYY-Qo-84" vertex="1">
+          <mxGeometry x="54" y="225" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="XqKsK3HbnwIZBjqYY-Qo-57" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="XqKsK3HbnwIZBjqYY-Qo-84" source="XqKsK3HbnwIZBjqYY-Qo-37" target="XqKsK3HbnwIZBjqYY-Qo-38" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="XqKsK3HbnwIZBjqYY-Qo-37" value="等待自动战斗产生结果" style="rounded=0;whiteSpace=wrap;html=1;" parent="XqKsK3HbnwIZBjqYY-Qo-84" vertex="1">
+          <mxGeometry x="275" y="225" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="XqKsK3HbnwIZBjqYY-Qo-58" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="XqKsK3HbnwIZBjqYY-Qo-84" source="XqKsK3HbnwIZBjqYY-Qo-38" target="XqKsK3HbnwIZBjqYY-Qo-41" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="XqKsK3HbnwIZBjqYY-Qo-103" value="僵持" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="XqKsK3HbnwIZBjqYY-Qo-58" vertex="1" connectable="0">
+          <mxGeometry x="-0.364" y="-1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="XqKsK3HbnwIZBjqYY-Qo-61" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="XqKsK3HbnwIZBjqYY-Qo-84" source="XqKsK3HbnwIZBjqYY-Qo-38" target="XqKsK3HbnwIZBjqYY-Qo-39" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="535" y="105" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="XqKsK3HbnwIZBjqYY-Qo-102" value="胜利" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="XqKsK3HbnwIZBjqYY-Qo-61" vertex="1" connectable="0">
+          <mxGeometry x="0.0318" y="1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="XqKsK3HbnwIZBjqYY-Qo-38" value="该界中我方战斗结果" style="rhombus;whiteSpace=wrap;html=1;" parent="XqKsK3HbnwIZBjqYY-Qo-84" vertex="1">
+          <mxGeometry x="475" y="190" width="120" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="XqKsK3HbnwIZBjqYY-Qo-62" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="XqKsK3HbnwIZBjqYY-Qo-84" source="XqKsK3HbnwIZBjqYY-Qo-39" target="XqKsK3HbnwIZBjqYY-Qo-44" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="XqKsK3HbnwIZBjqYY-Qo-39" value="可折跃" style="rounded=0;whiteSpace=wrap;html=1;" parent="XqKsK3HbnwIZBjqYY-Qo-84" vertex="1">
+          <mxGeometry x="685" y="75" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="XqKsK3HbnwIZBjqYY-Qo-63" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="XqKsK3HbnwIZBjqYY-Qo-84" source="XqKsK3HbnwIZBjqYY-Qo-41" target="XqKsK3HbnwIZBjqYY-Qo-44" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="XqKsK3HbnwIZBjqYY-Qo-41" value="可能需要支援" style="rounded=0;whiteSpace=wrap;html=1;" parent="XqKsK3HbnwIZBjqYY-Qo-84" vertex="1">
+          <mxGeometry x="685" y="225" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="XqKsK3HbnwIZBjqYY-Qo-64" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="XqKsK3HbnwIZBjqYY-Qo-84" source="XqKsK3HbnwIZBjqYY-Qo-42" target="XqKsK3HbnwIZBjqYY-Qo-44" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="XqKsK3HbnwIZBjqYY-Qo-42" value="需要支援" style="rounded=0;whiteSpace=wrap;html=1;" parent="XqKsK3HbnwIZBjqYY-Qo-84" vertex="1">
+          <mxGeometry x="685" y="375" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="XqKsK3HbnwIZBjqYY-Qo-65" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="XqKsK3HbnwIZBjqYY-Qo-84" source="XqKsK3HbnwIZBjqYY-Qo-44" target="XqKsK3HbnwIZBjqYY-Qo-45" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1165" y="610" as="targetPoint" />
+            <mxPoint x="1075" y="300" as="sourcePoint" />
+            <Array as="points">
+              <mxPoint x="1075" y="260" />
+              <mxPoint x="1075" y="569" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="XqKsK3HbnwIZBjqYY-Qo-44" value="由玩家选择调度" style="rounded=0;whiteSpace=wrap;html=1;" parent="XqKsK3HbnwIZBjqYY-Qo-84" vertex="1">
+          <mxGeometry x="866" y="225" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="XqKsK3HbnwIZBjqYY-Qo-67" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="XqKsK3HbnwIZBjqYY-Qo-84" source="XqKsK3HbnwIZBjqYY-Qo-45" target="XqKsK3HbnwIZBjqYY-Qo-50" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="XqKsK3HbnwIZBjqYY-Qo-79" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="XqKsK3HbnwIZBjqYY-Qo-84" source="XqKsK3HbnwIZBjqYY-Qo-45" target="XqKsK3HbnwIZBjqYY-Qo-51" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="955" y="850" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="XqKsK3HbnwIZBjqYY-Qo-83" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="XqKsK3HbnwIZBjqYY-Qo-84" source="XqKsK3HbnwIZBjqYY-Qo-45" target="XqKsK3HbnwIZBjqYY-Qo-55" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="955" y="1060" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="XqKsK3HbnwIZBjqYY-Qo-45" value="最终战斗结果" style="rounded=0;whiteSpace=wrap;html=1;" parent="XqKsK3HbnwIZBjqYY-Qo-84" vertex="1">
+          <mxGeometry x="895" y="539" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="XqKsK3HbnwIZBjqYY-Qo-71" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" parent="XqKsK3HbnwIZBjqYY-Qo-84" source="XqKsK3HbnwIZBjqYY-Qo-46" target="XqKsK3HbnwIZBjqYY-Qo-47" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="435" y="480" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="XqKsK3HbnwIZBjqYY-Qo-106" value="是" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="XqKsK3HbnwIZBjqYY-Qo-71" vertex="1" connectable="0">
+          <mxGeometry x="0.1262" y="-2" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="XqKsK3HbnwIZBjqYY-Qo-74" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="XqKsK3HbnwIZBjqYY-Qo-84" source="XqKsK3HbnwIZBjqYY-Qo-46" target="XqKsK3HbnwIZBjqYY-Qo-48" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="XqKsK3HbnwIZBjqYY-Qo-107" value="否" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="XqKsK3HbnwIZBjqYY-Qo-74" vertex="1" connectable="0">
+          <mxGeometry x="0.178" y="-3" relative="1" as="geometry">
+            <mxPoint x="-1" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="XqKsK3HbnwIZBjqYY-Qo-46" value="该界中获胜？" style="rhombus;whiteSpace=wrap;html=1;" parent="XqKsK3HbnwIZBjqYY-Qo-84" vertex="1">
+          <mxGeometry x="480" y="509.5" width="120" height="119" as="geometry" />
+        </mxCell>
+        <mxCell id="XqKsK3HbnwIZBjqYY-Qo-77" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="XqKsK3HbnwIZBjqYY-Qo-84" source="XqKsK3HbnwIZBjqYY-Qo-47" target="XqKsK3HbnwIZBjqYY-Qo-49" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="XqKsK3HbnwIZBjqYY-Qo-47" value="获取奖励，阵亡角色以濒死状态保留" style="rounded=0;whiteSpace=wrap;html=1;" parent="XqKsK3HbnwIZBjqYY-Qo-84" vertex="1">
+          <mxGeometry x="270" y="460" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="XqKsK3HbnwIZBjqYY-Qo-78" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="XqKsK3HbnwIZBjqYY-Qo-84" source="XqKsK3HbnwIZBjqYY-Qo-48" target="XqKsK3HbnwIZBjqYY-Qo-49" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="XqKsK3HbnwIZBjqYY-Qo-48" value="失去奖励，阵亡角色退出队伍" style="rounded=0;whiteSpace=wrap;html=1;" parent="XqKsK3HbnwIZBjqYY-Qo-84" vertex="1">
+          <mxGeometry x="270" y="628.5" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="XqKsK3HbnwIZBjqYY-Qo-49" value="队伍成员回复一定血量" style="rounded=0;whiteSpace=wrap;html=1;" parent="XqKsK3HbnwIZBjqYY-Qo-84" vertex="1">
+          <mxGeometry x="70" y="550" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="XqKsK3HbnwIZBjqYY-Qo-68" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="XqKsK3HbnwIZBjqYY-Qo-84" source="XqKsK3HbnwIZBjqYY-Qo-50" target="XqKsK3HbnwIZBjqYY-Qo-46" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="XqKsK3HbnwIZBjqYY-Qo-50" value="战斗结算" style="rounded=0;whiteSpace=wrap;html=1;" parent="XqKsK3HbnwIZBjqYY-Qo-84" vertex="1">
+          <mxGeometry x="685" y="539" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="XqKsK3HbnwIZBjqYY-Qo-80" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="XqKsK3HbnwIZBjqYY-Qo-84" source="XqKsK3HbnwIZBjqYY-Qo-51" target="XqKsK3HbnwIZBjqYY-Qo-52" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="745" y="760" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="XqKsK3HbnwIZBjqYY-Qo-81" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="XqKsK3HbnwIZBjqYY-Qo-84" source="XqKsK3HbnwIZBjqYY-Qo-51" target="XqKsK3HbnwIZBjqYY-Qo-53" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="XqKsK3HbnwIZBjqYY-Qo-82" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="XqKsK3HbnwIZBjqYY-Qo-84" source="XqKsK3HbnwIZBjqYY-Qo-51" target="XqKsK3HbnwIZBjqYY-Qo-54" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="745" y="940" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="XqKsK3HbnwIZBjqYY-Qo-51" value="队伍信息结算" style="rounded=0;whiteSpace=wrap;html=1;" parent="XqKsK3HbnwIZBjqYY-Qo-84" vertex="1">
+          <mxGeometry x="685" y="820" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="XqKsK3HbnwIZBjqYY-Qo-52" value="解锁未见过的化身" style="rounded=0;whiteSpace=wrap;html=1;" parent="XqKsK3HbnwIZBjqYY-Qo-84" vertex="1">
+          <mxGeometry x="480" y="730" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="XqKsK3HbnwIZBjqYY-Qo-53" value="各角色的剩余血量" style="rounded=0;whiteSpace=wrap;html=1;" parent="XqKsK3HbnwIZBjqYY-Qo-84" vertex="1">
+          <mxGeometry x="480" y="820" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="XqKsK3HbnwIZBjqYY-Qo-54" value="各角色当前所在的界&lt;br&gt;(重要战斗前应有机会将角色位置调整到最佳)" style="rounded=0;whiteSpace=wrap;html=1;" parent="XqKsK3HbnwIZBjqYY-Qo-84" vertex="1">
+          <mxGeometry x="480" y="910" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="XqKsK3HbnwIZBjqYY-Qo-55" value="其他道具结算" style="rounded=0;whiteSpace=wrap;html=1;" parent="XqKsK3HbnwIZBjqYY-Qo-84" vertex="1">
+          <mxGeometry x="685" y="1030" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="XqKsK3HbnwIZBjqYY-Qo-60" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="XqKsK3HbnwIZBjqYY-Qo-84" source="XqKsK3HbnwIZBjqYY-Qo-38" target="XqKsK3HbnwIZBjqYY-Qo-42" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="605" y="265" as="sourcePoint" />
+            <mxPoint x="695" y="265" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="535" y="405" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="XqKsK3HbnwIZBjqYY-Qo-105" value="落败" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="XqKsK3HbnwIZBjqYY-Qo-60" vertex="1" connectable="0">
+          <mxGeometry x="-0.0413" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="XqKsK3HbnwIZBjqYY-Qo-101" value="某些重要战斗必须赢下否则游戏结束" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;fillColor=#e51400;strokeColor=#B20000;fontColor=#ffffff;" parent="XqKsK3HbnwIZBjqYY-Qo-84" vertex="1">
+          <mxGeometry x="70" y="750" width="380" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="XqKsK3HbnwIZBjqYY-Qo-85" value="角色设计" style="swimlane;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="-1130" y="430" width="1350" height="990" as="geometry" />
+        </mxCell>
+        <mxCell id="XqKsK3HbnwIZBjqYY-Qo-86" value="按运营思路分" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="XqKsK3HbnwIZBjqYY-Qo-85" vertex="1">
+          <mxGeometry x="40" y="460" width="210" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="XqKsK3HbnwIZBjqYY-Qo-87" value="纸面强度卡：&lt;div&gt;一看就强，但是成长性差，前期无敌后期废物一个。&lt;br&gt;如纯靠基础数值，或者有逆天机制但是数值完全动不了。&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="XqKsK3HbnwIZBjqYY-Qo-85" vertex="1">
+          <mxGeometry x="307" y="467.5" width="210" height="75" as="geometry" />
+        </mxCell>
+        <mxCell id="XqKsK3HbnwIZBjqYY-Qo-88" value="收益卡：&lt;br&gt;战斗中当花瓶，但是有助于资源获取。&lt;br&gt;如增加金币，招募角色，爆装备。" style="rounded=0;whiteSpace=wrap;html=1;" parent="XqKsK3HbnwIZBjqYY-Qo-85" vertex="1">
+          <mxGeometry x="577" y="468" width="230" height="72" as="geometry" />
+        </mxCell>
+        <mxCell id="XqKsK3HbnwIZBjqYY-Qo-89" value="终端卡：&lt;div&gt;后期大哥级别，上限高但是吃资源或者吃成长。&lt;br&gt;如无限成长，加成数值高等。&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="XqKsK3HbnwIZBjqYY-Qo-85" vertex="1">
+          <mxGeometry x="847" y="467.5" width="220" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="XqKsK3HbnwIZBjqYY-Qo-90" value="按战斗职责分(就是战坦射法刺辅)" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="XqKsK3HbnwIZBjqYY-Qo-85" vertex="1">
+          <mxGeometry x="40" y="590" width="210" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="XqKsK3HbnwIZBjqYY-Qo-91" value="输出" style="rounded=0;whiteSpace=wrap;html=1;" parent="XqKsK3HbnwIZBjqYY-Qo-85" vertex="1">
+          <mxGeometry x="307" y="600" width="213" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="XqKsK3HbnwIZBjqYY-Qo-92" value="肉(抗压)" style="rounded=0;whiteSpace=wrap;html=1;" parent="XqKsK3HbnwIZBjqYY-Qo-85" vertex="1">
+          <mxGeometry x="577" y="595" width="213" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="XqKsK3HbnwIZBjqYY-Qo-93" value="功能性(辅助)" style="rounded=0;whiteSpace=wrap;html=1;" parent="XqKsK3HbnwIZBjqYY-Qo-85" vertex="1">
+          <mxGeometry x="847" y="595" width="213" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="XqKsK3HbnwIZBjqYY-Qo-94" value="按强度模式分" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="XqKsK3HbnwIZBjqYY-Qo-85" vertex="1">
+          <mxGeometry x="40" y="720" width="210" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="XqKsK3HbnwIZBjqYY-Qo-95" value="单界强度&lt;br&gt;只有某个界里的化身厉害，其他不行，能快速打开局面解锁跃迁机会。&lt;br&gt;基本不会进行跃迁，位置稳定。" style="rounded=0;whiteSpace=wrap;html=1;" parent="XqKsK3HbnwIZBjqYY-Qo-85" vertex="1">
+          <mxGeometry x="303" y="730" width="213" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="XqKsK3HbnwIZBjqYY-Qo-96" value="跃迁强度&lt;br&gt;化身不算能打，但是跃迁带来的效果很强。&lt;br&gt;可以是跃迁技能，或者某个化身与跃迁有关的效果(类似战吼)" style="rounded=0;whiteSpace=wrap;html=1;" parent="XqKsK3HbnwIZBjqYY-Qo-85" vertex="1">
+          <mxGeometry x="577" y="725" width="213" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="XqKsK3HbnwIZBjqYY-Qo-97" value="跨界强度：&lt;br&gt;不用进行跃迁，也可以影响到其他界的战斗。&lt;br&gt;这类卡不应左右战局，甚至不应有直接输出。可以提供功能性或者收益。" style="rounded=0;whiteSpace=wrap;html=1;" parent="XqKsK3HbnwIZBjqYY-Qo-85" vertex="1">
+          <mxGeometry x="847" y="725" width="213" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="XqKsK3HbnwIZBjqYY-Qo-98" value="可以引入族的概念，角色的化身基本是同族，总之不能让未知化身完全不可预测，否则会失去策略意义。在游玩过程中，“族谱”会逐渐展开。&lt;br&gt;跃迁技能也可以与族有一定关系。" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="XqKsK3HbnwIZBjqYY-Qo-85" vertex="1">
+          <mxGeometry x="400" y="70" width="380" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="XqKsK3HbnwIZBjqYY-Qo-99" value="总的来说强调战斗中进行跃迁(界的概念)。不能由单界强度角色完全主宰战斗。&lt;br&gt;由以下几点设计保证&lt;br&gt;1.跃迁之前化身不能解锁的猜谜机制，有些玩家抓取某个角色的原因在他这一族可能的化身里，要“验货”，不仅这个界要快速打赢，还要考虑到跃迁到的界中大概率是劣势或者僵持，如果打不赢全都白搭。&lt;br&gt;2.敌人生成不是平均战力，而会偏重一两个界，有时正好碰上玩家队伍薄弱的界，就要靠跃迁来撑住。&lt;br&gt;3.简单粗暴地提高单界大哥的获取难度。" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;fillColor=#e51400;strokeColor=#B20000;fontColor=#ffffff;" parent="XqKsK3HbnwIZBjqYY-Qo-85" vertex="1">
+          <mxGeometry x="420" y="830" width="450" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="XqKsK3HbnwIZBjqYY-Qo-100" value="纯飞舞&lt;br&gt;战斗能力差，但是有其他方面可以弥补。" style="rounded=0;whiteSpace=wrap;html=1;" parent="XqKsK3HbnwIZBjqYY-Qo-85" vertex="1">
+          <mxGeometry x="1100" y="595" width="213" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="Cr3YdzHvAbcoI9NFojB_-23" value="一个族" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="XqKsK3HbnwIZBjqYY-Qo-85">
+          <mxGeometry x="960" y="50" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="Cr3YdzHvAbcoI9NFojB_-42" value="异能界化身1" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="XqKsK3HbnwIZBjqYY-Qo-85">
+          <mxGeometry x="900" y="100" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="Cr3YdzHvAbcoI9NFojB_-44" value="人外化身1" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="XqKsK3HbnwIZBjqYY-Qo-85">
+          <mxGeometry x="900" y="200" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="Cr3YdzHvAbcoI9NFojB_-45" value="未来化身1" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="XqKsK3HbnwIZBjqYY-Qo-85">
+          <mxGeometry x="900" y="300" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="Cr3YdzHvAbcoI9NFojB_-46" value="异能界化身2" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="XqKsK3HbnwIZBjqYY-Qo-85">
+          <mxGeometry x="1030" y="100" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="Cr3YdzHvAbcoI9NFojB_-47" value="人外化身2" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="XqKsK3HbnwIZBjqYY-Qo-85">
+          <mxGeometry x="1030" y="200" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="Cr3YdzHvAbcoI9NFojB_-48" value="未来化身2" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="XqKsK3HbnwIZBjqYY-Qo-85">
+          <mxGeometry x="1030" y="300" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="Cr3YdzHvAbcoI9NFojB_-49" value="" style="swimlane;startSize=0;" vertex="1" parent="XqKsK3HbnwIZBjqYY-Qo-85">
+          <mxGeometry x="860" y="50" width="300" height="350" as="geometry" />
+        </mxCell>
+        <mxCell id="kT27sdp81ouVYo39qiSc-9" value="" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="-1490" y="1820" width="1240" height="350" as="geometry" />
+        </mxCell>
+        <mxCell id="kT27sdp81ouVYo39qiSc-10" value="" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="-1250" y="1980" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="kT27sdp81ouVYo39qiSc-11" value="" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="-947" y="1980" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="kT27sdp81ouVYo39qiSc-12" value="" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="-640" y="1980" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="kT27sdp81ouVYo39qiSc-13" value="" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="-1490" y="2160" width="1240" height="350" as="geometry" />
+        </mxCell>
+        <mxCell id="kT27sdp81ouVYo39qiSc-14" value="" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="-1490" y="2510" width="1240" height="350" as="geometry" />
+        </mxCell>
+        <mxCell id="kT27sdp81ouVYo39qiSc-15" value="" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="-1490" y="2850" width="1240" height="350" as="geometry" />
+        </mxCell>
+        <mxCell id="kT27sdp81ouVYo39qiSc-16" value="" style="rhombus;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="-1090" y="1579" width="380" height="350" as="geometry" />
+        </mxCell>
+        <mxCell id="kT27sdp81ouVYo39qiSc-17" value="" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="-1210" y="2338" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="kT27sdp81ouVYo39qiSc-18" value="" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="-800" y="2330" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Cr3YdzHvAbcoI9NFojB_-7" value="Vertical Container" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="130" y="2100" width="500" height="730" as="geometry" />
+        </mxCell>
+        <mxCell id="Cr3YdzHvAbcoI9NFojB_-12" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="Cr3YdzHvAbcoI9NFojB_-7">
+          <mxGeometry x="70" y="290" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="Cr3YdzHvAbcoI9NFojB_-13" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="Cr3YdzHvAbcoI9NFojB_-7">
+          <mxGeometry x="90" y="70" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="Cr3YdzHvAbcoI9NFojB_-9" value="" style="endArrow=none;html=1;rounded=0;exitX=0;exitY=0.25;exitDx=0;exitDy=0;" edge="1" parent="1" source="Cr3YdzHvAbcoI9NFojB_-7">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="360" y="2320" as="sourcePoint" />
+            <mxPoint x="1780" y="2280" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Cr3YdzHvAbcoI9NFojB_-10" value="+金币" style="shape=tape;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1210" y="1920" width="120" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="Cr3YdzHvAbcoI9NFojB_-15" value="" style="endArrow=none;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="220" y="2560" as="sourcePoint" />
+            <mxPoint x="1851.9997336647727" y="2540" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Cr3YdzHvAbcoI9NFojB_-20" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="990" y="2150" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="Cr3YdzHvAbcoI9NFojB_-4" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="1090" y="2150" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="Cr3YdzHvAbcoI9NFojB_-18" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="1020" y="2660" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="Cr3YdzHvAbcoI9NFojB_-17" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="870" y="2140" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="Cr3YdzHvAbcoI9NFojB_-16" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="760" y="2150" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="Cr3YdzHvAbcoI9NFojB_-5" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="800" y="2390" width="82" height="82" as="geometry" />
+        </mxCell>
+        <mxCell id="Cr3YdzHvAbcoI9NFojB_-19" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="930" y="2390" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="Cr3YdzHvAbcoI9NFojB_-14" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="1050" y="2380" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="Cr3YdzHvAbcoI9NFojB_-22" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="1680" y="1990" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="Cr3YdzHvAbcoI9NFojB_-41" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-960" y="2640" width="120" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
