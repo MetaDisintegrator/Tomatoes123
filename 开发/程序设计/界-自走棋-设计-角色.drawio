@@ -1,157 +1,157 @@
-<mxfile host="app.diagrams.net" modified="2024-04-06T02:00:59.981Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.5735.289 Safari/537.36" etag="4dpU_wUqZ1w5wlIth5W-" version="24.2.2" type="device">
+<mxfile host="app.diagrams.net" modified="2024-04-07T15:09:45.908Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.5735.289 Safari/537.36" etag="sCOe9ByBmMj_8WMcawkN" version="24.2.2" type="device">
   <diagram id="C5RBs43oDa-KdzZeNtuy" name="Page-1">
-    <mxGraphModel dx="6657" dy="3325" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="8189" dy="4037" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="WIyWlLk6GJQsqaUBKTNV-0" />
         <mxCell id="WIyWlLk6GJQsqaUBKTNV-1" parent="WIyWlLk6GJQsqaUBKTNV-0" />
-        <mxCell id="0m9o0J90n3XRMIsHEA-K-6" value="告诉策划：&lt;br&gt;技能范围即使比平A更远，棋子也会和目标保持平A距离&lt;br&gt;但是技能锁定目标机制和平A不同或者是区域技能的话范围远还是有用的" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+        <mxCell id="0m9o0J90n3XRMIsHEA-K-6" value="告诉策划：&lt;br&gt;技能范围即使比平A更远，棋子也会和目标保持平A距离&lt;br&gt;但是技能锁定目标机制和平A不同或者是区域技能的话范围远还是有用的" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;fillColor=#f8cecc;strokeColor=#b85450;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
           <mxGeometry x="927" y="-970" width="400" height="100" as="geometry" />
         </mxCell>
-        <mxCell id="0m9o0J90n3XRMIsHEA-K-20" value="&lt;font style=&quot;font-size: 64px;&quot;&gt;AI&lt;/font&gt;" style="swimlane;whiteSpace=wrap;html=1;startSize=50;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+        <mxCell id="0m9o0J90n3XRMIsHEA-K-20" value="&lt;font style=&quot;font-size: 64px;&quot;&gt;AI&lt;/font&gt;" style="swimlane;whiteSpace=wrap;html=1;startSize=50;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
           <mxGeometry x="180" y="-180" width="1590" height="990" as="geometry" />
         </mxCell>
-        <mxCell id="0m9o0J90n3XRMIsHEA-K-3" value="状态机" style="swimlane;horizontal=0;whiteSpace=wrap;html=1;" vertex="1" parent="0m9o0J90n3XRMIsHEA-K-20">
+        <mxCell id="0m9o0J90n3XRMIsHEA-K-3" value="状态机" style="swimlane;horizontal=0;whiteSpace=wrap;html=1;" parent="0m9o0J90n3XRMIsHEA-K-20" vertex="1">
           <mxGeometry x="50" y="90" width="670" height="190" as="geometry" />
         </mxCell>
-        <mxCell id="0m9o0J90n3XRMIsHEA-K-4" value="寻路状态" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="0m9o0J90n3XRMIsHEA-K-3">
+        <mxCell id="0m9o0J90n3XRMIsHEA-K-4" value="寻路状态" style="rounded=0;whiteSpace=wrap;html=1;" parent="0m9o0J90n3XRMIsHEA-K-3" vertex="1">
           <mxGeometry x="113" y="60" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="0m9o0J90n3XRMIsHEA-K-5" value="攻击(普攻和技能状态)" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="0m9o0J90n3XRMIsHEA-K-3">
+        <mxCell id="0m9o0J90n3XRMIsHEA-K-5" value="攻击(普攻和技能状态)" style="rounded=0;whiteSpace=wrap;html=1;" parent="0m9o0J90n3XRMIsHEA-K-3" vertex="1">
           <mxGeometry x="263" y="20" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="0m9o0J90n3XRMIsHEA-K-7" value="失控(被控制的状态)" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="0m9o0J90n3XRMIsHEA-K-3">
+        <mxCell id="0m9o0J90n3XRMIsHEA-K-7" value="失控(被控制的状态)" style="rounded=0;whiteSpace=wrap;html=1;" parent="0m9o0J90n3XRMIsHEA-K-3" vertex="1">
           <mxGeometry x="263" y="105" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="0m9o0J90n3XRMIsHEA-K-8" value="死亡&lt;br&gt;正常来说马上会被清理，但可以拓展。" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="0m9o0J90n3XRMIsHEA-K-3">
+        <mxCell id="0m9o0J90n3XRMIsHEA-K-8" value="死亡&lt;br&gt;正常来说马上会被清理，但可以拓展。" style="rounded=0;whiteSpace=wrap;html=1;" parent="0m9o0J90n3XRMIsHEA-K-3" vertex="1">
           <mxGeometry x="413" y="60" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="0m9o0J90n3XRMIsHEA-K-10" value="攻击队列" style="swimlane;horizontal=0;whiteSpace=wrap;html=1;startSize=23;" vertex="1" parent="0m9o0J90n3XRMIsHEA-K-20">
+        <mxCell id="0m9o0J90n3XRMIsHEA-K-10" value="攻击队列" style="swimlane;horizontal=0;whiteSpace=wrap;html=1;startSize=23;" parent="0m9o0J90n3XRMIsHEA-K-20" vertex="1">
           <mxGeometry x="50" y="280" width="670" height="200" as="geometry" />
         </mxCell>
-        <mxCell id="0m9o0J90n3XRMIsHEA-K-13" value="当前动作(动作会自己记录自己在什么状态)" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="0m9o0J90n3XRMIsHEA-K-10">
+        <mxCell id="0m9o0J90n3XRMIsHEA-K-13" value="当前动作(动作会自己记录自己在什么状态)" style="rounded=0;whiteSpace=wrap;html=1;" parent="0m9o0J90n3XRMIsHEA-K-10" vertex="1">
           <mxGeometry x="90" y="30" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="0m9o0J90n3XRMIsHEA-K-14" value="等待队列(非必要不含有普攻)" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="0m9o0J90n3XRMIsHEA-K-10">
+        <mxCell id="0m9o0J90n3XRMIsHEA-K-14" value="等待队列(非必要不含有普攻)" style="rounded=0;whiteSpace=wrap;html=1;" parent="0m9o0J90n3XRMIsHEA-K-10" vertex="1">
           <mxGeometry x="90" y="130" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="0m9o0J90n3XRMIsHEA-K-15" value="等待队列没有技能，就放普攻" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="0m9o0J90n3XRMIsHEA-K-10">
+        <mxCell id="0m9o0J90n3XRMIsHEA-K-15" value="等待队列没有技能，就放普攻" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="0m9o0J90n3XRMIsHEA-K-10" vertex="1">
           <mxGeometry x="290" y="50" width="300" height="100" as="geometry" />
         </mxCell>
-        <mxCell id="0m9o0J90n3XRMIsHEA-K-16" value="扳机系统(条件命令系统)" style="swimlane;horizontal=0;whiteSpace=wrap;html=1;" vertex="1" parent="0m9o0J90n3XRMIsHEA-K-20">
+        <mxCell id="0m9o0J90n3XRMIsHEA-K-16" value="扳机系统(条件命令系统)" style="swimlane;horizontal=0;whiteSpace=wrap;html=1;" parent="0m9o0J90n3XRMIsHEA-K-20" vertex="1">
           <mxGeometry x="50" y="480" width="670" height="190" as="geometry" />
         </mxCell>
-        <mxCell id="0m9o0J90n3XRMIsHEA-K-17" value="触发扳机列" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="0m9o0J90n3XRMIsHEA-K-16">
+        <mxCell id="0m9o0J90n3XRMIsHEA-K-17" value="触发扳机列" style="rounded=0;whiteSpace=wrap;html=1;" parent="0m9o0J90n3XRMIsHEA-K-16" vertex="1">
           <mxGeometry x="264" y="65" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="0m9o0J90n3XRMIsHEA-K-18" value="开关扳机列" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="0m9o0J90n3XRMIsHEA-K-16">
+        <mxCell id="0m9o0J90n3XRMIsHEA-K-18" value="开关扳机列" style="rounded=0;whiteSpace=wrap;html=1;" parent="0m9o0J90n3XRMIsHEA-K-16" vertex="1">
           <mxGeometry x="60" y="65" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="0m9o0J90n3XRMIsHEA-K-19" value="扳机条件触发器&lt;br&gt;(操作对象：攻击队列)" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="0m9o0J90n3XRMIsHEA-K-16">
+        <mxCell id="0m9o0J90n3XRMIsHEA-K-19" value="扳机条件触发器&lt;br&gt;(操作对象：攻击队列)" style="rounded=0;whiteSpace=wrap;html=1;" parent="0m9o0J90n3XRMIsHEA-K-16" vertex="1">
           <mxGeometry x="480" y="65" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="0m9o0J90n3XRMIsHEA-K-50" value="寻路" style="swimlane;whiteSpace=wrap;html=1;fontSize=32;startSize=40;" vertex="1" parent="0m9o0J90n3XRMIsHEA-K-20">
+        <mxCell id="0m9o0J90n3XRMIsHEA-K-50" value="寻路" style="swimlane;whiteSpace=wrap;html=1;fontSize=32;startSize=40;" parent="0m9o0J90n3XRMIsHEA-K-20" vertex="1">
           <mxGeometry x="770" y="90" width="650" height="580" as="geometry" />
         </mxCell>
-        <mxCell id="0m9o0J90n3XRMIsHEA-K-12" value="&lt;div&gt;寻路优化目前方案：&lt;/div&gt;&lt;div&gt;1.有一个地图管理每一个格子。&lt;/div&gt;&lt;div&gt;2.每个棋子在确定开始移动时触发这个棋子内部的一个事件，结束移动时给地图发事件，结束移动事件会附上一个终点格子坐标和棋子信息。&lt;/div&gt;&lt;div style=&quot;&quot;&gt;3.每个棋子完成一次寻路后会注册到路径上所有格子，走过的格子取消注册。如果监听到有人在格子上落脚，那就重新寻路，同时注册这个挡他的棋子，如果挡过他的棋子开始移动，他就再重新寻路。&lt;/div&gt;" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;fillColor=#dae8fc;strokeColor=#6c8ebf;align=left;" vertex="1" parent="0m9o0J90n3XRMIsHEA-K-50">
+        <mxCell id="0m9o0J90n3XRMIsHEA-K-12" value="&lt;div&gt;寻路优化目前方案：&lt;/div&gt;&lt;div&gt;1.有一个地图管理每一个格子。&lt;/div&gt;&lt;div&gt;2.每个棋子在确定开始移动时触发这个棋子内部的一个事件，结束移动时给地图发事件，结束移动事件会附上一个终点格子坐标和棋子信息。&lt;/div&gt;&lt;div style=&quot;&quot;&gt;3.每个棋子完成一次寻路后会注册到路径上所有格子，走过的格子取消注册。如果监听到有人在格子上落脚，那就重新寻路，同时注册这个挡他的棋子，如果挡过他的棋子开始移动，他就再重新寻路。&lt;/div&gt;" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;fillColor=#dae8fc;strokeColor=#6c8ebf;align=left;" parent="0m9o0J90n3XRMIsHEA-K-50" vertex="1">
           <mxGeometry x="30" y="157.5" width="560" height="145" as="geometry" />
         </mxCell>
-        <mxCell id="0m9o0J90n3XRMIsHEA-K-21" value="&lt;font style=&quot;font-size: 64px;&quot;&gt;表现&lt;/font&gt;" style="swimlane;whiteSpace=wrap;html=1;startSize=70;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+        <mxCell id="0m9o0J90n3XRMIsHEA-K-21" value="&lt;font style=&quot;font-size: 64px;&quot;&gt;表现&lt;/font&gt;" style="swimlane;whiteSpace=wrap;html=1;startSize=70;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
           <mxGeometry x="-750" y="-190" width="710" height="660" as="geometry" />
         </mxCell>
-        <mxCell id="0m9o0J90n3XRMIsHEA-K-28" value="&lt;font style=&quot;font-size: 32px;&quot;&gt;动画&lt;/font&gt;" style="swimlane;whiteSpace=wrap;html=1;startSize=35;" vertex="1" parent="0m9o0J90n3XRMIsHEA-K-21">
+        <mxCell id="0m9o0J90n3XRMIsHEA-K-28" value="&lt;font style=&quot;font-size: 32px;&quot;&gt;动画&lt;/font&gt;" style="swimlane;whiteSpace=wrap;html=1;startSize=35;" parent="0m9o0J90n3XRMIsHEA-K-21" vertex="1">
           <mxGeometry x="70" y="100" width="310" height="352.5" as="geometry" />
         </mxCell>
-        <mxCell id="0m9o0J90n3XRMIsHEA-K-29" value="用Unity的Animator" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="0m9o0J90n3XRMIsHEA-K-28">
+        <mxCell id="0m9o0J90n3XRMIsHEA-K-29" value="用Unity的Animator" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="0m9o0J90n3XRMIsHEA-K-28" vertex="1">
           <mxGeometry x="20" y="52.5" width="260" height="77.5" as="geometry" />
         </mxCell>
-        <mxCell id="0m9o0J90n3XRMIsHEA-K-30" value="Animator" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="0m9o0J90n3XRMIsHEA-K-28">
+        <mxCell id="0m9o0J90n3XRMIsHEA-K-30" value="Animator" style="rounded=0;whiteSpace=wrap;html=1;" parent="0m9o0J90n3XRMIsHEA-K-28" vertex="1">
           <mxGeometry x="90" y="152.5" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="0m9o0J90n3XRMIsHEA-K-31" value="Sprite用来转向" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="0m9o0J90n3XRMIsHEA-K-28">
+        <mxCell id="0m9o0J90n3XRMIsHEA-K-31" value="Sprite用来转向" style="rounded=0;whiteSpace=wrap;html=1;" parent="0m9o0J90n3XRMIsHEA-K-28" vertex="1">
           <mxGeometry x="90" y="247.5" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="0m9o0J90n3XRMIsHEA-K-51" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="0m9o0J90n3XRMIsHEA-K-21">
+        <mxCell id="0m9o0J90n3XRMIsHEA-K-51" value="" style="rounded=0;whiteSpace=wrap;html=1;" parent="0m9o0J90n3XRMIsHEA-K-21" vertex="1">
           <mxGeometry x="80" y="490" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="0m9o0J90n3XRMIsHEA-K-52" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="0m9o0J90n3XRMIsHEA-K-21">
+        <mxCell id="0m9o0J90n3XRMIsHEA-K-52" value="" style="rounded=0;whiteSpace=wrap;html=1;" parent="0m9o0J90n3XRMIsHEA-K-21" vertex="1">
           <mxGeometry x="80" y="570" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="0m9o0J90n3XRMIsHEA-K-22" value="&lt;font style=&quot;font-size: 32px;&quot;&gt;特效&lt;/font&gt;" style="swimlane;whiteSpace=wrap;html=1;startSize=40;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+        <mxCell id="0m9o0J90n3XRMIsHEA-K-22" value="&lt;font style=&quot;font-size: 32px;&quot;&gt;特效&lt;/font&gt;" style="swimlane;whiteSpace=wrap;html=1;startSize=40;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
           <mxGeometry x="-1640" y="10" width="200" height="200" as="geometry" />
         </mxCell>
-        <mxCell id="0m9o0J90n3XRMIsHEA-K-23" value="音效" style="swimlane;whiteSpace=wrap;html=1;startSize=40;fontSize=32;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+        <mxCell id="0m9o0J90n3XRMIsHEA-K-23" value="音效" style="swimlane;whiteSpace=wrap;html=1;startSize=40;fontSize=32;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
           <mxGeometry x="-1640" y="280" width="200" height="200" as="geometry" />
         </mxCell>
-        <mxCell id="0m9o0J90n3XRMIsHEA-K-33" value="包含于战斗管理系统" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+        <mxCell id="0m9o0J90n3XRMIsHEA-K-33" value="包含于战斗管理系统" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
           <mxGeometry x="-1730" y="-160" width="380" height="100" as="geometry" />
         </mxCell>
-        <mxCell id="0m9o0J90n3XRMIsHEA-K-34" value="&lt;font style=&quot;font-size: 64px;&quot;&gt;状态&lt;/font&gt;" style="swimlane;whiteSpace=wrap;html=1;startSize=70;fontSize=64;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+        <mxCell id="0m9o0J90n3XRMIsHEA-K-34" value="&lt;font style=&quot;font-size: 64px;&quot;&gt;状态&lt;/font&gt;" style="swimlane;whiteSpace=wrap;html=1;startSize=70;fontSize=64;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
           <mxGeometry x="-1050" y="585" width="1100" height="775" as="geometry" />
         </mxCell>
-        <mxCell id="0m9o0J90n3XRMIsHEA-K-38" value="&lt;font style=&quot;font-size: 32px;&quot;&gt;战斗实时状态&lt;/font&gt;" style="swimlane;whiteSpace=wrap;html=1;startSize=40;" vertex="1" parent="0m9o0J90n3XRMIsHEA-K-34">
+        <mxCell id="0m9o0J90n3XRMIsHEA-K-38" value="&lt;font style=&quot;font-size: 32px;&quot;&gt;战斗实时状态&lt;/font&gt;" style="swimlane;whiteSpace=wrap;html=1;startSize=40;" parent="0m9o0J90n3XRMIsHEA-K-34" vertex="1">
           <mxGeometry x="231" y="95" width="810" height="640" as="geometry" />
         </mxCell>
-        <mxCell id="0m9o0J90n3XRMIsHEA-K-39" value="实时属性" style="swimlane;whiteSpace=wrap;html=1;fontSize=16;" vertex="1" parent="0m9o0J90n3XRMIsHEA-K-38">
+        <mxCell id="0m9o0J90n3XRMIsHEA-K-39" value="实时属性" style="swimlane;whiteSpace=wrap;html=1;fontSize=16;" parent="0m9o0J90n3XRMIsHEA-K-38" vertex="1">
           <mxGeometry x="30" y="80" width="260" height="300" as="geometry" />
         </mxCell>
-        <mxCell id="0m9o0J90n3XRMIsHEA-K-40" value="血量" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="0m9o0J90n3XRMIsHEA-K-39">
+        <mxCell id="0m9o0J90n3XRMIsHEA-K-40" value="血量" style="rounded=0;whiteSpace=wrap;html=1;" parent="0m9o0J90n3XRMIsHEA-K-39" vertex="1">
           <mxGeometry x="70" y="50" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="0m9o0J90n3XRMIsHEA-K-41" value="攻速" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="0m9o0J90n3XRMIsHEA-K-39">
+        <mxCell id="0m9o0J90n3XRMIsHEA-K-41" value="攻速" style="rounded=0;whiteSpace=wrap;html=1;" parent="0m9o0J90n3XRMIsHEA-K-39" vertex="1">
           <mxGeometry x="70" y="140" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="0m9o0J90n3XRMIsHEA-K-42" value="霸体等级..." style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="0m9o0J90n3XRMIsHEA-K-39">
+        <mxCell id="0m9o0J90n3XRMIsHEA-K-42" value="霸体等级..." style="rounded=0;whiteSpace=wrap;html=1;" parent="0m9o0J90n3XRMIsHEA-K-39" vertex="1">
           <mxGeometry x="70" y="220" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="0m9o0J90n3XRMIsHEA-K-43" value="buff管理" style="swimlane;whiteSpace=wrap;html=1;fontSize=16;" vertex="1" parent="0m9o0J90n3XRMIsHEA-K-38">
+        <mxCell id="0m9o0J90n3XRMIsHEA-K-43" value="buff管理" style="swimlane;whiteSpace=wrap;html=1;fontSize=16;" parent="0m9o0J90n3XRMIsHEA-K-38" vertex="1">
           <mxGeometry x="330" y="80" width="440" height="360" as="geometry" />
         </mxCell>
-        <mxCell id="0m9o0J90n3XRMIsHEA-K-44" value="buff链表" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="0m9o0J90n3XRMIsHEA-K-43">
+        <mxCell id="0m9o0J90n3XRMIsHEA-K-44" value="buff链表" style="rounded=0;whiteSpace=wrap;html=1;" parent="0m9o0J90n3XRMIsHEA-K-43" vertex="1">
           <mxGeometry x="160" y="45" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="0m9o0J90n3XRMIsHEA-K-47" value="buff类" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="0m9o0J90n3XRMIsHEA-K-43">
+        <mxCell id="0m9o0J90n3XRMIsHEA-K-47" value="buff类" style="swimlane;whiteSpace=wrap;html=1;" parent="0m9o0J90n3XRMIsHEA-K-43" vertex="1">
           <mxGeometry x="23" y="125" width="387" height="215" as="geometry" />
         </mxCell>
-        <mxCell id="0m9o0J90n3XRMIsHEA-K-48" value="参数信息" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="0m9o0J90n3XRMIsHEA-K-47">
+        <mxCell id="0m9o0J90n3XRMIsHEA-K-48" value="参数信息" style="rounded=0;whiteSpace=wrap;html=1;" parent="0m9o0J90n3XRMIsHEA-K-47" vertex="1">
           <mxGeometry x="137" y="50" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="0m9o0J90n3XRMIsHEA-K-49" value="各时间节点回调" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="0m9o0J90n3XRMIsHEA-K-47">
+        <mxCell id="0m9o0J90n3XRMIsHEA-K-49" value="各时间节点回调" style="rounded=0;whiteSpace=wrap;html=1;" parent="0m9o0J90n3XRMIsHEA-K-47" vertex="1">
           <mxGeometry x="137" y="140" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="0m9o0J90n3XRMIsHEA-K-56" value="这里是个接口，因为敌人面板不这样" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="0m9o0J90n3XRMIsHEA-K-34">
+        <mxCell id="0m9o0J90n3XRMIsHEA-K-56" value="这里是个接口，因为敌人面板不这样" style="rounded=0;whiteSpace=wrap;html=1;" parent="0m9o0J90n3XRMIsHEA-K-34" vertex="1">
           <mxGeometry x="60" y="500" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="0m9o0J90n3XRMIsHEA-K-36" value="&lt;font style=&quot;font-size: 32px;&quot;&gt;角色面板&lt;/font&gt;" style="swimlane;whiteSpace=wrap;html=1;startSize=40;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+        <mxCell id="0m9o0J90n3XRMIsHEA-K-36" value="&lt;font style=&quot;font-size: 32px;&quot;&gt;角色面板&lt;/font&gt;" style="swimlane;whiteSpace=wrap;html=1;startSize=40;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
           <mxGeometry x="-1640" y="760" width="200" height="200" as="geometry" />
         </mxCell>
-        <mxCell id="0m9o0J90n3XRMIsHEA-K-37" value="包含于队伍管理系统" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+        <mxCell id="0m9o0J90n3XRMIsHEA-K-37" value="包含于队伍管理系统" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
           <mxGeometry x="-1730" y="620" width="380" height="100" as="geometry" />
         </mxCell>
-        <mxCell id="0m9o0J90n3XRMIsHEA-K-53" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="0m9o0J90n3XRMIsHEA-K-51" target="0m9o0J90n3XRMIsHEA-K-22">
+        <mxCell id="0m9o0J90n3XRMIsHEA-K-53" value="" style="endArrow=classic;html=1;rounded=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="0m9o0J90n3XRMIsHEA-K-51" target="0m9o0J90n3XRMIsHEA-K-22" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="-900" y="360" as="sourcePoint" />
             <mxPoint x="-850" y="310" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="0m9o0J90n3XRMIsHEA-K-54" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="0m9o0J90n3XRMIsHEA-K-52" target="0m9o0J90n3XRMIsHEA-K-23">
+        <mxCell id="0m9o0J90n3XRMIsHEA-K-54" value="" style="endArrow=classic;html=1;rounded=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="0m9o0J90n3XRMIsHEA-K-52" target="0m9o0J90n3XRMIsHEA-K-23" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="-660" y="315" as="sourcePoint" />
             <mxPoint x="-1020" y="162" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="0m9o0J90n3XRMIsHEA-K-55" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="0m9o0J90n3XRMIsHEA-K-56" target="0m9o0J90n3XRMIsHEA-K-36">
+        <mxCell id="0m9o0J90n3XRMIsHEA-K-55" value="" style="endArrow=classic;html=1;rounded=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="0m9o0J90n3XRMIsHEA-K-56" target="0m9o0J90n3XRMIsHEA-K-36" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="-660" y="417" as="sourcePoint" />
             <mxPoint x="-1020" y="396" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="0m9o0J90n3XRMIsHEA-K-57" value="&lt;font style=&quot;font-size: 64px;&quot;&gt;信息交互&lt;/font&gt;" style="swimlane;whiteSpace=wrap;html=1;startSize=72;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
-          <mxGeometry x="120" y="870" width="1580" height="922" as="geometry" />
+        <mxCell id="0m9o0J90n3XRMIsHEA-K-57" value="&lt;font style=&quot;font-size: 64px;&quot;&gt;信息交互&lt;/font&gt;" style="swimlane;whiteSpace=wrap;html=1;startSize=72;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="-1070" y="1460" width="1170" height="550" as="geometry" />
         </mxCell>
-        <mxCell id="0m9o0J90n3XRMIsHEA-K-58" value="依赖注入容器" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="0m9o0J90n3XRMIsHEA-K-57">
+        <mxCell id="0m9o0J90n3XRMIsHEA-K-58" value="依赖注入容器" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="0m9o0J90n3XRMIsHEA-K-57" vertex="1">
           <mxGeometry x="110" y="140" width="380" height="100" as="geometry" />
         </mxCell>
-        <mxCell id="0m9o0J90n3XRMIsHEA-K-59" value="事件和命令" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="0m9o0J90n3XRMIsHEA-K-57">
+        <mxCell id="0m9o0J90n3XRMIsHEA-K-59" value="事件和命令" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="0m9o0J90n3XRMIsHEA-K-57" vertex="1">
           <mxGeometry x="120" y="310" width="380" height="100" as="geometry" />
         </mxCell>
       </root>
