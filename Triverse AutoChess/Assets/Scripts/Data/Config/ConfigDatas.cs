@@ -1,31 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Game.Enum.Chess;
 using Game.Enum.Main;
 using System.Linq;
 
-namespace Game.Enum.Main
-{
-    public enum E_Realm
-    {
-        None = 0,
-        Arcane = 1,
-        PawVerse = 2,
-        Technosphere = 3,
-    }
-}
-namespace Game.Enum.Chess
-{
-    public enum E_ChessRole
-    { 
-        None = 0,
-        Tank = 1,
-        DPS = 2,
-        Assassin = 3,
-    }
-}
-namespace Game.Data.Chess
+namespace Game.Data.Config
 {
     /// <summary>
     /// 个体或化身配置
@@ -144,22 +123,17 @@ namespace Game.Data.Chess
         public AttrConfigData attrConfig;
         public int Id;
         public float randWeight;
-        public List<int> skills;
 
         public E_Realm Realm { get; set; }
         public E_ChessRole defaultRole { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }
         public string ResPath { get; set; }
+        /// <summary>
+        /// 读写只存ID
+        /// </summary>
+        public List<ISkillConfigData> Skills { get; set; }
 
-        public List<ISkillConfigData> Skills 
-        {
-            get 
-            {
-                //从ConfigKit读取真正的技能数据 TODO
-                return null;
-            }
-        }
 
         public AttrConfigData GetAttrConfig(int lv = -1)
         {
@@ -172,8 +146,10 @@ namespace Game.Data.Chess
         public int id;
 
         public Dictionary<E_Realm, (List<(float randWeight, int id)> rand,float range)> avatarRand;
-
-        public List<(float randWeight, int id)> warpSkillRand;
+        /// <summary>
+        /// 读写时data部分只存ID
+        /// </summary>
+        public List<(float randWeight, ISkillConfigData data)> warpSkillRand;
         public float warpSkillRandRange;
 
         public string Name { get; set; }
@@ -205,18 +181,17 @@ namespace Game.Data.Chess
         public ISkillConfigData RandWarpSkill()
         {
             float rand = Random.Range(0, warpSkillRandRange);
-            int id = warpSkillRand.Last().id;
+            ISkillConfigData res = warpSkillRand.Last().data;
             foreach (var data in warpSkillRand)
             {
                 rand -= data.randWeight;
                 if (rand < 0)
                 {
-                    id = data.id;
+                    res = data.data;
                     break;
                 }
             }
-            //加载，返回
-            return default;
+            return res;
         }
     }
 
@@ -235,7 +210,9 @@ namespace Game.Data.Chess
         public string Description { get; set; }
 
         public string ResPath { get; set; }
-
+        /// <summary>
+        /// 读写只存ID
+        /// </summary>
         public List<ISkillConfigData> Skills { get; set; }
 
         public AttrConfigData GetAttrConfig(int lv = -1)
@@ -249,14 +226,17 @@ namespace Game.Data.Chess
         public int id;
 
         public List<AttrConfigData> attrConfigs;
-        public string Name { get; }
-        public string Description { get; }
-        public string ResPath { get; }
-        public string SOPath { get; }
+        public string Name { get; set;}
+        public string Description { get; set;}
+        public string ResPath { get; set;}
+        public string SOPath { get; set;}
         public AttrConfigData GetAttrConfig(int lv = -1)
         { 
             return attrConfigs[lv-1];
         }
-        public List<ISkillConfigData> Skills { get; }
+        /// <summary>
+        /// 读写只存ID
+        /// </summary>
+        public List<ISkillConfigData> Skills { get; set; }
     }
 }

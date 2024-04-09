@@ -4,7 +4,7 @@ using UnityEngine;
 using System;
 using System.IO;
 using System.Text;
-using Game.Data.Chess;
+using Game.Data.Config;
 
 namespace Game.Tool
 {

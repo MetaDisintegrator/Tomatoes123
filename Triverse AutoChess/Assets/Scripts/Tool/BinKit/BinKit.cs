@@ -1,4 +1,4 @@
-using Game.Data.Chess;
+using Game.Data.Config;
 using System;
 using System.Collections;
 using System.Collections.Generic;
