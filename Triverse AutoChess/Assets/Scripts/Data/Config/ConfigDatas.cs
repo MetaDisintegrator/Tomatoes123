@@ -81,6 +81,7 @@ namespace Game.Data.Chess
         public float AttackRange { get; }
         public float CritRate { get; }
         public float CritMultiplier { get; }
+        public float EvationRate { get; }
     }
     /// <summary>
     /// ×°±¸ÅäÖÃ
@@ -114,6 +115,8 @@ namespace Game.Data.Chess
         public float CritRate { get; set; }
 
         public float CritMultiplier { get; set; }
+
+        public float EvationRate { get; set; }
     }
 
     public class SkillConfigData : ISkillConfigData

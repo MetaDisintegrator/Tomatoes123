@@ -22,6 +22,7 @@ namespace Game.Tool
             res.AttackRange = BinKit.Read<float>(BA);
             res.CritRate = BinKit.Read<float>(BA);
             res.CritMultiplier = BinKit.Read<float>(BA);
+            res.EvationRate = BinKit.Read<float>(BA);
             return res;
         }
 
@@ -36,7 +37,8 @@ namespace Game.Tool
                 value.AttackRate,
                 value.AttackRange,
                 value.CritRate,
-                value.CritMultiplier);
+                value.CritMultiplier,
+                value.EvationRate);
         }
     }
 
@@ -70,6 +72,7 @@ namespace Game.Tool
                     case nameof(AttrConfigData.AttackRange):
                     case nameof(AttrConfigData.CritRate):
                     case nameof(AttrConfigData.CritMultiplier):
+                    case nameof(AttrConfigData.EvationRate):
                         fieldMap[name].SetValue(res, BinKit.Read<float>(BA));
                         break;
                 }
@@ -89,7 +92,8 @@ namespace Game.Tool
                 (nameof(value.AttackRate), value.AttackRate),
                 (nameof(value.AttackRange), value.AttackRange),
                 (nameof(value.CritRate), value.CritRate),
-                (nameof(value.CritMultiplier), value.CritMultiplier)
+                (nameof(value.CritMultiplier), value.CritMultiplier),
+                (nameof(value.EvationRate), value.EvationRate)
                 );
             BinKit.Write<string>(fs, false, BinKit.Safe_End);
         }
