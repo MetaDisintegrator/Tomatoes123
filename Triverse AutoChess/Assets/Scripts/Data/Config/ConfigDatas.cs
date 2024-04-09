@@ -97,46 +97,66 @@ namespace Game.Data.Chess
 
     public class AttrConfigData : IAttrConfigData
     {
-        public float MaxHealth { get; protected set; }
+        public int lvBelong;
 
-        public float PhysicalResistance { get; protected set; }
+        public float MaxHealth { get; set; }
 
-        public float MagicalResistance { get; protected set; }
+        public float PhysicalResistance { get; set; }
 
-        public float Attack { get; protected set; }
+        public float MagicalResistance { get; set; }
 
-        public float AttackRate { get; protected set; }
+        public float Attack { get; set; }
 
-        public float AttackRange { get; protected set; }
+        public float AttackRate { get; set; }
 
-        public float CritRate { get; protected set; }
+        public float AttackRange { get; set; }
 
-        public float CritMultiplier { get; protected set; }
+        public float CritRate { get; set; }
+
+        public float CritMultiplier { get; set; }
     }
 
     public class SkillConfigData : ISkillConfigData
     {
-        public string Name { get; protected set; }
+        public int id;
 
-        public string Description { get; protected set; }
+        public string Name { get; set; }
 
-        public float CoolDown { get; protected set; }
+        public string Description { get; set; }
 
-        public string ResPath { get; protected set; }
+        public float CoolDown { get; set; }
 
-        public string SOPath { get; protected set; }
+        public string ResPath { get; set; }
+
+        public string SOPath { get; set; }
+    }
+
+    public class WarpSkillConfigData : SkillConfigData, ISkillConfigData
+    {
+        public float randWeight;
     }
 
     public class AvatarConfigData : ICharacterConfigData
     {
         public AttrConfigData attrConfig;
+        public int Id;
+        public float randWeight;
+        public List<int> skills;
 
-        public E_Realm Realm { get; protected set; }
-        public E_ChessRole defaultRole { get; protected set; }
-        public string Name { get; protected set; }
-        public string Description { get; protected set; }
-        public string ResPath { get; protected set; }
-        public List<ISkillConfigData> Skills { get; protected set; }
+        public E_Realm Realm { get; set; }
+        public E_ChessRole defaultRole { get; set; }
+        public string Name { get; set; }
+        public string Description { get; set; }
+        public string ResPath { get; set; }
+
+        public List<ISkillConfigData> Skills 
+        {
+            get 
+            {
+                //从ConfigKit读取真正的技能数据 TODO
+                return null;
+            }
+        }
 
         public AttrConfigData GetAttrConfig(int lv = -1)
         {
@@ -146,16 +166,16 @@ namespace Game.Data.Chess
 
     public class TribeConfigData : ITribeConfigData
     {
-        public Dictionary<int, ICharacterConfigData> avatars;
+        public int id;
+
         public Dictionary<E_Realm, (List<(float randWeight, int id)> rand,float range)> avatarRand;
 
-        public Dictionary<int, ISkillConfigData> warpSkills;
         public List<(float randWeight, int id)> warpSkillRand;
         public float warpSkillRandRange;
 
-        public string Name { get; protected set; }
+        public string Name { get; set; }
 
-        public string Description { get; protected set; }
+        public string Description { get; set; }
 
         public ICharacterConfigData GetAvatar(int tribeId)
         {
@@ -199,19 +219,21 @@ namespace Game.Data.Chess
 
     public class IndividualConfigData : ICharacterConfigData
     {
+        public int id;
+
         public List<AttrConfigData> attrConfigs;
 
         public E_Realm Realm => E_Realm.None;
 
-        public E_ChessRole defaultRole { get; protected set; }
+        public E_ChessRole defaultRole { get; set; }
 
-        public string Name { get; protected set; }
+        public string Name { get; set; }
 
-        public string Description { get; protected set; }
+        public string Description { get; set; }
 
-        public string ResPath { get; protected set; }
+        public string ResPath { get; set; }
 
-        public List<ISkillConfigData> Skills { get; protected set; }
+        public List<ISkillConfigData> Skills { get; set; }
 
         public AttrConfigData GetAttrConfig(int lv = -1)
         {
@@ -221,6 +243,8 @@ namespace Game.Data.Chess
     
     public class GearConfigData : IGearConfigData
     {
+        public int id;
+
         public List<AttrConfigData> attrConfigs;
         public string Name { get; }
         public string Description { get; }

@@ -21,10 +21,11 @@ namespace Game.Tool
 
         static Dictionary<int, ITribeConfigData> tribes;
         static Dictionary<int, ICharacterConfigData> individuals;
+        static Dictionary<int, ICharacterConfigData> avatars;
         static Dictionary<int, IGearConfigData> gears;
         static Dictionary<int, ISkillConfigData> warpSkills;
         static Dictionary<int, ISkillConfigData> skills;
-        //事件
+        //事件 TODO
     }
 
 }

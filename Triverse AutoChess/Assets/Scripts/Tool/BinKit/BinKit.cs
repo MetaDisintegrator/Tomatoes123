@@ -1,3 +1,4 @@
+using Game.Data.Chess;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -7,24 +8,57 @@ using UnityEngine;
 
 namespace Game.Tool
 {
-    public interface IBinConverter { }
+    public interface IBinConverter 
+    {
+    }
     public interface IBinConverter<T> : IBinConverter
     {
         T Read(ByteArray BA);
         void Write(T value, FileStream fs);
     }
-    public static class BinKit
+    public static partial class BinKit
     {
-        static BinKit()
-        { 
-            converters = new Dictionary<Type, IBinConverter> ();
-            converters.Add(typeof(int),new IntBinConverter());
-        }
+        public static readonly string Safe_End = "END";
         static Dictionary<Type, IBinConverter> converters;
+        static Dictionary<Type, IBinConverter> safeConverters;
+        #region GetConverter
         public static IBinConverter<T> GetConverter<T>()
         { 
             return converters[typeof(T)] as IBinConverter<T>;
         }
+        public static IBinConverter<T> GetSafeConverter<T>()
+        { 
+            IBinConverter res;
+            if (safeConverters.TryGetValue(typeof(T), out res)) { return res as IBinConverter<T>; }
+            else return GetConverter<T>();
+        }
+        #endregion
+        #region Write&Read
+        public static void Write<T>(FileStream fs, bool safeMode = false, params T[] values)
+        {
+            IBinConverter<T> converter = safeMode ? GetSafeConverter<T>() : GetConverter<T>();
+            foreach (var value in values)
+            {
+                converter.Write(value, fs);
+            }
+        }
+        public static T Read<T>(ByteArray BA,bool safeMode = false)
+        { 
+            IBinConverter<T> converter = safeMode? GetSafeConverter<T>() : GetConverter<T>();
+            return converter.Read(BA);
+        }
+        public static void WriteWithName<T>(FileStream fs, bool safeMode = true, params (string name, T value)[] pairs)
+        {
+            IBinConverter<T> valueConverter = safeMode ? GetSafeConverter<T>() : GetConverter<T>();
+            IBinConverter<string> nameConverter = GetConverter<string>();
+            foreach (var pair in pairs)
+            {
+                nameConverter.Write(pair.name, fs);
+                valueConverter.Write(pair.value, fs);
+            }
+        }
+        #endregion
+        #region List&Dict
         public static List<T> ReadList<T>(ByteArray BA, Func<ByteArray,T> reader)
         { 
             List<T> list = new List<T>();
@@ -64,6 +98,7 @@ namespace Game.Tool
                 valueWriter(value[key], fs);
             }
         }
+        #endregion
     }
     public class ByteArray
     {
@@ -73,21 +108,6 @@ namespace Game.Tool
         {
             this.data = buffer;
             readIndex = 0;
-        }
-    }
-    struct IntBinConverter : IBinConverter<int>
-    {
-        public int Read(ByteArray BA)
-        {
-            int res = BitConverter.ToInt32(BA.data, BA.readIndex);
-            BA.readIndex += 4;
-            return res;
-        }
-
-        public void Write(int value, FileStream fs)
-        {
-            byte[] buffer = BitConverter.GetBytes(value);
-            fs.Write(buffer, 0, buffer.Length);
         }
     }
 }

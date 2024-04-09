@@ -305,3 +305,5 @@ Temp/
 !/XlsxTools/*/*.sln
 !/XlsxTools/*/*.csproj
 *.meta
+LocalTest/
+图片临时存放/
