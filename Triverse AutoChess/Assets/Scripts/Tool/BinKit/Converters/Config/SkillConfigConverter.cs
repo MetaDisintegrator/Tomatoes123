@@ -8,7 +8,7 @@ using UnityEngine;
 
 namespace Game.Tool
 {
-    struct SkillConfigDataConverter: IBinConverter<SkillConfigData>
+    struct SkillConfigDataConverter : IBinConverter<SkillConfigData>
     {
         public SkillConfigData Read(ByteArray BA)
         {
@@ -16,45 +16,51 @@ namespace Game.Tool
             res.id = BinKit.Read<int>(BA);
             res.CoolDown = BinKit.Read<float>(BA);
             res.Name = BinKit.Read<string>(BA);
-            res.Description = BinKit.Read<string>(BA);           
+            res.Description = BinKit.Read<string>(BA);
             res.ResPath = BinKit.Read<string>(BA);
             res.SOPath = BinKit.Read<string>(BA);
             return res;
         }
 
-        public void Write(SkillConfigData value,FileStream fs)
+        public void Write(SkillConfigData value, FileStream fs)
         {
             BinKit.Write<int>(fs, false, value.id);
             BinKit.Write<float>(fs, false, value.CoolDown);
             BinKit.Write<string>(fs, false,
-                value.Name
-                value.Description
-                value.ResPath
+                value.Name,
+                value.Description,
+                value.ResPath,
                 value.SOPath);
         }
     }
 
-    struct SkillConfigDataSafeConverter:IBinConverter<SkillConfigData>
+    struct SkillConfigDataSafeConverter : IBinConverter<SkillConfigData>
     {
         public SkillConfigData Read(ByteArray BA)
         {
-            SkillConfigData res = new SkillrConfigData();
+            SkillConfigData res = new SkillConfigData();
 
             IBinConverter<string> nameConverter = BinKit.GetConverter<string>();
             Dictionary<string, FieldInfo> fieldMap = new Dictionary<string, FieldInfo>();
-            foreach(var fieldInfo in typeof (SkillConfigData).GetFields())
+            foreach (var fieldInfo in typeof(SkillConfigData).GetFields())
             {
                 fieldMap.Add(fieldInfo.Name, fieldInfo);
             }
 
             string name = nameConverter.Read(BA);
-            while (name!=BinKit.Safe_End)
+            while (name != BinKit.Safe_End)
             {
-                switch(name)
+                switch (name)
                 {
-                    
+
                 }
             }
-
+            return null;
         }
+
+        public void Write(SkillConfigData value, FileStream fs)
+        {
+            throw new NotImplementedException();
+        }
+    }
 }
