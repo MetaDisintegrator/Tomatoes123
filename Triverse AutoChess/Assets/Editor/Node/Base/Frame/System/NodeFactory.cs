@@ -13,7 +13,7 @@ namespace Editor.NodeEditor
     {
         public int NodeIdGen { get; }
         public int ZoneIdGen { get; }
-        void RegisterNode(int typeId, Func<INodeBuilder,INodeBuilder> builder, bool isSpecial);
+        void RegisterNode(int typeId, Func<INodeBuilder,INodeBuilder> builder, E_SpecialNode specialType);
         void RegisterZone(int typeId, Func<IZoneBuilder, IZoneBuilder> builder);
     }
     public interface INodeFactorySystem:INodeFactorySystemInit
@@ -83,7 +83,7 @@ namespace Editor.NodeEditor
             this.GetModel<INodeModel>().Nodes.Add(node.ID, node);
         }
         
-        void INodeFactorySystemInit.RegisterNode(int typeId, Func<INodeBuilder,INodeBuilder> builder, bool isSpecial)
+        void INodeFactorySystemInit.RegisterNode(int typeId, Func<INodeBuilder,INodeBuilder> builder, E_SpecialNode specialType)
         {
             if (nodeFactory.ContainsKey(typeId))
                 Debug.LogError("节点类型ID重复"+typeId);
@@ -92,15 +92,11 @@ namespace Editor.NodeEditor
                 nodeFactory.Add(typeId, (zone, pos) => 
                 {
                     INodeBuilder obj = new Node();
-                    IZone secondZone = null;
                     IStyleFactorySystem styleFactory = this.GetSystem<IStyleFactorySystem>();
-                    if (isSpecial && zone != null)
-                        secondZone = zone.Father;
                     builder(obj)
                         .BuildType(typeId)
-                        .BuildToken(isSpecial)
                         .BuildFather(zone)
-                        .BuildSecondZone(secondZone)
+                        .SetSpecial(specialType)
                         .BuildPosition(pos);
                     return obj.Complete();
                 });

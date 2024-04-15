@@ -10,7 +10,7 @@ namespace Editor.NodeEditor
     public interface INode : IZoneContent, INodeBuilder
     {
         public int ID { get; }
-        public bool IsSpecial { get; }
+        public E_SpecialNode SpecialType { get; set; }
         public IZone OwnerZone { get; }
         public IZone SecondZone { get; }
         public List<IPoint> InPoints { get; set; }
@@ -31,7 +31,7 @@ namespace Editor.NodeEditor
         float currentBottom;
         #region 绘图数据
         public int TypeID { get; set; }
-        public bool IsSpecial { get; set; }
+        public E_SpecialNode SpecialType { get; set; }
         #endregion
 
         #region 转换数据
@@ -76,8 +76,7 @@ namespace Editor.NodeEditor
         #endregion
 
         #region Builder
-        bool isEntrance;
-        bool isCycleEntrance;
+        
         public Node()
         {
             InPoints = new List<IPoint>();
@@ -110,22 +109,22 @@ namespace Editor.NodeEditor
             return this;
         }
 
-        INodeBuilder INodeBuilder.BuildSecondZone(IZone secondZone)
-        {
-            this.SecondZone = secondZone;
-            return this;
-        }
-
-        INodeBuilder INodeBuilder.BuildToken(bool isSpecial)
-        {
-            this.IsSpecial = isSpecial;
-            return this;
-        }
-
         INode INodeBuilder.Complete()
         {
-            if (isEntrance) OwnerZone.Entrance = this;
-            if (isCycleEntrance) OwnerZone.CycleEntrance = this;
+            switch (SpecialType)
+            {
+                case E_SpecialNode.Entrance:
+                    OwnerZone.Entrance = this;
+                    SecondZone = OwnerZone.Father;
+                    break;
+                case E_SpecialNode.CycleEntrance:
+                    OwnerZone.CycleEntrance = this;
+                    break;
+                case E_SpecialNode.Exit:
+                    OwnerZone.Exit = this;
+                    SecondZone = OwnerZone.Father;
+                    break;
+            }
             return this;
         }
 
@@ -144,15 +143,9 @@ namespace Editor.NodeEditor
             point.OwnerNode = this;
             return this;
         }
-        INodeBuilder INodeBuilder.SetAsEntrance()
+        INodeBuilder INodeBuilder.SetSpecial(E_SpecialNode specialType)
         {
-            isEntrance = true;
-            return this;
-        }
-
-        INodeBuilder INodeBuilder.SetAsCycleEntrance()
-        {
-            isCycleEntrance = true;
+            this.SpecialType = specialType;
             return this;
         }
         #endregion

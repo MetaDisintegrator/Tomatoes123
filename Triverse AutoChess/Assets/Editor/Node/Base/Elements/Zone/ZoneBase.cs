@@ -1,6 +1,7 @@
 using QFramework;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.UIElements;
 
@@ -16,7 +17,8 @@ namespace Editor.NodeEditor
 
         public INode Entrance { get; set; }
         public INode CycleEntrance { get; set; }
-        InPoint AddCycleItem(E_NodeData dataType);
+        public INode Exit { get; set; }
+        InPoint HandleSpecialConnect(OutPoint start,E_SpecialNode callerType);
 
 
         void RemoveNode(Node node);
@@ -121,35 +123,65 @@ namespace Editor.NodeEditor
         }
         #endregion
 
-        #region Cycle
+        #region SpecialNodes
         public INode Entrance { get; set; }
         public INode CycleEntrance { get; set; }
+        public INode Exit { get; set; }
         List<PointGroup> pointGroups;
-        public InPoint AddCycleItem(E_NodeData dataType)
+        public InPoint HandleSpecialConnect(OutPoint start, E_SpecialNode callerType)
         {
             IItemFactorySystem itemFactory = this.GetSystem<IItemFactorySystem>();
-            IItem repeater = itemFactory.GetRepeaterItem(dataType,"入口输入");
-            IItem simple = itemFactory.GetSimpleItem(dataType, "回环输入");
-            PointGroup pointGroup = new();
-            //添加条目
-            Entrance.BuildItem(repeater);
-            CycleEntrance.BuildItem(simple);
-            //返回值
-            InPoint res = simple.Points[0] as InPoint;
-            //添加管理
-            foreach (var point in repeater.Points)
+            InPoint res = null;
+            IItem repeater;
+            IItem simple;
+            switch (callerType)
             {
-                pointGroup.points.Add(point);
+                case E_SpecialNode.None:
+                    Debug.LogError("非特殊节点调用了特殊节点连接处理");
+                    break;
+                case E_SpecialNode.Entrance:
+                    AddCycle();
+                    //返回入口点
+                    res = repeater.Points.First(point => point is InPoint) as InPoint; 
+                    break;
+                case E_SpecialNode.CycleEntrance:
+                    AddCycle();
+                    //返回入口点
+                    res = simple.Points.First(point => point is InPoint) as InPoint;
+                    break;
+                case E_SpecialNode.Exit:
+                    repeater = itemFactory.GetRepeaterItem(start.DataType, "区域输出");
+                    Exit.BuildItem(repeater);
+                    Exit.MoveUnknown();
+                    RegisterGroup(repeater);
+                    res = repeater.Points.First(point => point is InPoint) as InPoint;
+                    break;
             }
-            foreach (var point in simple.Points)
-            { 
-                pointGroup.points.Add(point);
-            }
-            pointGroups.Add(pointGroup);
-            //移动Unknown
-            Entrance.MoveUnknown();
-            CycleEntrance.MoveUnknown();
             return res;
+            void RegisterGroup(params IItem[] items)
+            {
+                PointGroup pointGroup = new();
+                foreach (var item in items)
+                {
+                    foreach (var point in item.Points)
+                    {
+                        pointGroup.points.Add(point);
+                    }
+                }
+                pointGroups.Add(pointGroup);
+            }
+            void AddCycle()
+            {
+                repeater = itemFactory.GetRepeaterItem(start.DataType, "入口输入");
+                simple = itemFactory.GetSimpleItem(start.DataType, "回环输入");
+                //添加条目
+                Entrance.BuildItem(repeater);
+                CycleEntrance.BuildItem(simple);
+                //移动Unknown
+                Entrance.MoveUnknown();
+                CycleEntrance.MoveUnknown();
+                RegisterGroup(repeater, simple);
+            }
         }
 
         void CheckGroups()

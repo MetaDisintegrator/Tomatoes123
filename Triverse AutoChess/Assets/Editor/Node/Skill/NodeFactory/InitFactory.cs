@@ -22,14 +22,18 @@ namespace Editor.NodeEditor
                     system.QBuildNode("测试入口", "").Invoke(builder)
                         .BuildItem(item.GetRepeaterItem(E_NodeData.Int, "主"))
                         .BuildPoint(new UnknowPoint())
-                        .SetAsEntrance()
-                        , true);
+                        , E_SpecialNode.Entrance);
             system.RegisterNode(-9,
                 (builder) =>
                 system.QBuildNode("测试回环","").Invoke(builder)
                 .BuildPoint(new UnknowPoint())
-                .SetAsCycleEntrance()
-                , true);
+                , E_SpecialNode.CycleEntrance);
+            system.RegisterNode(-8,
+                (builder) =>
+                system.QBuildNode("测试出口", "").Invoke(builder)
+                .BuildItem(item.GetSimpleItem(E_NodeData.Bool, "打破循环"))
+                .BuildPoint(new UnknowPoint())
+                , E_SpecialNode.Exit);
             #endregion
 
             system.RegisterNode(1,
@@ -38,14 +42,14 @@ namespace Editor.NodeEditor
                       .BuildItem(item.GetSimpleItem(E_NodeData.Int, "int"))
                       .BuildItem(item.GetSimpleItem(E_NodeData.Float, "float"))
                       .BuildPoint(new OutPoint(E_NodeData.Int, E_NodeDataScale.Single))
-                      , false);
+                      , E_SpecialNode.None);
             system.RegisterNode(2,
                 (builder) =>
                 system.QBuildNode("大于","").Invoke(builder)
                 .BuildItem(item.GetSimpleItem(E_NodeData.Float,"大"))
                 .BuildItem(item.GetSimpleItem(E_NodeData.Float,"小"))
                 .BuildPoint(new OutPoint(E_NodeData.Bool,E_NodeDataScale.Multiple))
-                , false);
+                , E_SpecialNode.None);
         }
     }
 }

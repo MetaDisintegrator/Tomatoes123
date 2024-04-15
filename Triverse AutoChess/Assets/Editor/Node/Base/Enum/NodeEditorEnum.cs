@@ -29,4 +29,11 @@ namespace Editor.NodeEditor
         Single,
         Multiple
     }
+    public enum E_SpecialNode
+    { 
+        None = 0,
+        Entrance,
+        CycleEntrance,
+        Exit
+    }
 }

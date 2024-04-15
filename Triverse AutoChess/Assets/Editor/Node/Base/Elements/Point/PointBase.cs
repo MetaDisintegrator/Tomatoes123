@@ -230,7 +230,7 @@ namespace Editor.NodeEditor
 
         protected override void OnConnectOtherData(OutPoint point)
         {
-            InPoint inPoint = OwnerNode.OwnerZone.AddCycleItem(point.DataType);
+            InPoint inPoint = OwnerNode.OwnerZone.HandleSpecialConnect(point,OwnerNode.SpecialType);
             this.GetSystem<IConnectSystem>().Connect(point, inPoint);
         }
     }

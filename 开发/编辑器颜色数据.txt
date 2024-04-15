@@ -1,0 +1,6 @@
+连接点颜色：
+float 06FF00
+
+Entrance:可以连接外部，连接建立在Entrance，同步至Cycle
+Cycle：不可连接外部，连接建立在Cycle，同步至Entrance
+Exit：可以连接外部，连接建立在Exit，不同步

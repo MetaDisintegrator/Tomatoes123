@@ -72,13 +72,10 @@ namespace Editor.NodeEditor
         INodeBuilder BuildType(int typeId);
         INodeBuilder BuildID(int id);
         INodeBuilder BuildSO(string SoName);
-        INodeBuilder BuildToken(bool isSpecial);
         INodeBuilder BuildFather(IZone father);
-        INodeBuilder BuildSecondZone(IZone secondZone);
         INodeBuilder BuildItem(IItem item);
         INodeBuilder BuildPoint(IPoint point);
-        INodeBuilder SetAsEntrance();
-        INodeBuilder SetAsCycleEntrance();
+        INodeBuilder SetSpecial(E_SpecialNode specialType);
         new INode Complete();
     }
     #endregion
