@@ -1,13 +1,15 @@
+using Game.Tool;
 using QFramework;
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.UIElements;
 
 namespace Editor.NodeEditor
 {
-    public interface IZone : IZoneContent
+    public interface IZone : IZoneContent,IDiagramData
     { 
         public int ID { get; }
         public Vector2 Min { get; set; }
@@ -15,10 +17,11 @@ namespace Editor.NodeEditor
         public IZone Father { get; }
         public List<INode> Nodes { get; }
 
+        public INode Trigger { get; set; }
         public INode Entrance { get; set; }
         public INode CycleEntrance { get; set; }
         public INode Exit { get; set; }
-        InPoint HandleSpecialConnect(OutPoint start,E_SpecialNode callerType);
+        InPoint HandleSpecialConnect(E_NodeData dataType,E_SpecialNode callerType);
 
 
         void RemoveNode(Node node);
@@ -124,11 +127,12 @@ namespace Editor.NodeEditor
         #endregion
 
         #region SpecialNodes
+        public INode Trigger { get; set; }
         public INode Entrance { get; set; }
         public INode CycleEntrance { get; set; }
         public INode Exit { get; set; }
         List<PointGroup> pointGroups;
-        public InPoint HandleSpecialConnect(OutPoint start, E_SpecialNode callerType)
+        public InPoint HandleSpecialConnect(E_NodeData dataType, E_SpecialNode callerType)
         {
             IItemFactorySystem itemFactory = this.GetSystem<IItemFactorySystem>();
             InPoint res = null;
@@ -150,8 +154,8 @@ namespace Editor.NodeEditor
                     res = simple.Points.First(point => point is InPoint) as InPoint;
                     break;
                 case E_SpecialNode.Exit:
-                    repeater = itemFactory.GetRepeaterItem(start.DataType, "区域输出");
-                    Exit.BuildItem(repeater);
+                    repeater = itemFactory.GetRepeaterItem(dataType, "区域输出");
+                    (Exit as INodeBuilder).BuildItem(repeater);
                     Exit.MoveUnknown();
                     RegisterGroup(repeater);
                     res = repeater.Points.First(point => point is InPoint) as InPoint;
@@ -163,6 +167,7 @@ namespace Editor.NodeEditor
                 PointGroup pointGroup = new();
                 foreach (var item in items)
                 {
+                    item.Dynamic = true;
                     foreach (var point in item.Points)
                     {
                         pointGroup.points.Add(point);
@@ -172,11 +177,11 @@ namespace Editor.NodeEditor
             }
             void AddCycle()
             {
-                repeater = itemFactory.GetRepeaterItem(start.DataType, "入口输入");
-                simple = itemFactory.GetSimpleItem(start.DataType, "回环输入");
+                repeater = itemFactory.GetRepeaterItem(dataType, "入口输入");
+                simple = itemFactory.GetSimpleItem(dataType, "回环输入");
                 //添加条目
-                Entrance.BuildItem(repeater);
-                CycleEntrance.BuildItem(simple);
+                (Entrance as INodeBuilder).BuildItem(repeater);
+                (CycleEntrance as INodeBuilder).BuildItem(simple);
                 //移动Unknown
                 Entrance.MoveUnknown();
                 CycleEntrance.MoveUnknown();
@@ -195,6 +200,20 @@ namespace Editor.NodeEditor
                     break;
                 }
             }
+        }
+        #endregion
+
+        #region DiagramData
+        public void WriteDiagramData(FileStream fs)
+        {
+            //父区域ID
+            BinKit.Write(fs, false, Father != null ? Father.ID : -1);
+            //pos
+            BinKit.Write(fs, false, Rect.position);
+            //区域类型
+            BinKit.Write(fs, false, TypeID);
+            //ID
+            BinKit.Write(fs, false, ID);
         }
         #endregion
 

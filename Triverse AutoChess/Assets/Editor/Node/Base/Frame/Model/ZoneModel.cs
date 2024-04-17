@@ -51,7 +51,7 @@ namespace Editor.NodeEditor
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
-        ZoneTreeNode FindNode(int id);
+        ZoneTreeNode FindTreeNode(int id);
     }
 
     public class ZoneModel : AbstractModel, IZoneModel
@@ -139,7 +139,7 @@ namespace Editor.NodeEditor
         }
         #endregion
 
-        public ZoneTreeNode FindNode(int id)
+        public ZoneTreeNode FindTreeNode(int id)
         { 
             ZoneTreeNode res = null;
             foreach(var tree in Trees) 

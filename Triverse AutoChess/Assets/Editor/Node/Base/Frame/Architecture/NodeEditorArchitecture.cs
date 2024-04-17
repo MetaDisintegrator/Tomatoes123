@@ -18,6 +18,10 @@ namespace Editor.NodeEditor
             RegisterModel<IZoneModel>(new ZoneModel());
             RegisterModel<INodeModel>(new NodeModel());
             RegisterModel<IConnectModel>(new ConnectModel());
+            RegisterModel<IDiagramDirectoryModel>(new DiagramDirectoryModel());
+            RegisterModel<IItemModel>(new ItemModel());
+
+            RegisterUtility<IDirectoryUtility>(new DirectoryUtility());
         }
     }
 }

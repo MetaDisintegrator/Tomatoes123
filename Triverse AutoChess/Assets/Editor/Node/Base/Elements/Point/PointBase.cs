@@ -15,6 +15,7 @@ namespace Editor.NodeEditor
         public E_NodeDataScale Scale { get; }
         public Vector2 Center { get; }
         public Action OnDestroyCallback { get; set; }
+        void TryConnect(IPoint other, IConnectSystem system);
         void Connect(IPoint other);
         void Disconnect(IPoint other);
         void RemoveSelf();
@@ -82,7 +83,7 @@ namespace Editor.NodeEditor
                 system.Selecting = null;
             }
         }
-        protected abstract void TryConnect(IPoint selectingPoint,IConnectSystem system);
+        public abstract void TryConnect(IPoint selectingPoint,IConnectSystem system);
         protected abstract void AsFirstSelected(IConnectSystem system);
         public abstract void Connect(IPoint other);
         public abstract void Disconnect(IPoint other);
@@ -112,7 +113,7 @@ namespace Editor.NodeEditor
         }
 
         #region 连接
-        protected override void TryConnect(IPoint selecting,IConnectSystem system)
+        public override void TryConnect(IPoint selecting,IConnectSystem system)
         {
             if (Scale == E_NodeDataScale.Single && selecting.Scale == E_NodeDataScale.Multiple) return;//规模
             if (selecting.Dir == Dir) return; //方向
@@ -183,7 +184,7 @@ namespace Editor.NodeEditor
             system.Selecting = this;
         }
 
-        protected override void TryConnect(IPoint selecting, IConnectSystem system)
+        public override void TryConnect(IPoint selecting, IConnectSystem system)
         {
             if (Scale == E_NodeDataScale.Multiple && selecting.Scale == E_NodeDataScale.Single) return;//规模
             if (selecting.Dir == Dir) return; //方向
@@ -230,7 +231,7 @@ namespace Editor.NodeEditor
 
         protected override void OnConnectOtherData(OutPoint point)
         {
-            InPoint inPoint = OwnerNode.OwnerZone.HandleSpecialConnect(point,OwnerNode.SpecialType);
+            InPoint inPoint = OwnerNode.OwnerZone.HandleSpecialConnect(point.DataType,OwnerNode.SpecialType);
             this.GetSystem<IConnectSystem>().Connect(point, inPoint);
         }
     }

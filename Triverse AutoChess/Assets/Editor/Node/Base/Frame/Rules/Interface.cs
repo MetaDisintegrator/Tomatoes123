@@ -1,15 +1,20 @@
+using Game.Tool;
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using UnityEngine;
 using UnityEngine.SocialPlatforms.GameCenter;
 
 namespace Editor.NodeEditor
 {
     #region ¶ÁÐ´
-    public interface IRenderData
+    public interface IDiagramData
     {
-        void WriteRenderData();
-        void ReadRenderData();
+        void WriteDiagramData(FileStream fs);
+    }
+    public interface IVarDiagramData : IDiagramData
+    {
+        void ReadDiagramData(ByteArray BA);
     }
     public interface ISolverData
     {

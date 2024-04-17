@@ -11,7 +11,7 @@ namespace Editor.NodeEditor
         protected override void OnExecute()
         {
             IZoneModel model = this.GetModel<IZoneModel>();
-            ZoneTreeNode node = model.FindNode(zone.ID);
+            ZoneTreeNode node = model.FindTreeNode(zone.ID);
             model.DoPostOrder((zone) => (zone as Zone).OnDestroy(),node);
             if (node.parentZone != null)
             {

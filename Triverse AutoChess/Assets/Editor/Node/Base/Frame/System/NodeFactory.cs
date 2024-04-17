@@ -20,6 +20,9 @@ namespace Editor.NodeEditor
     {
         IZone GenerateZone(int typeId, IZone parent, Vector2 pos);
         INode GenerateNode(int typeId, IZone ownerZone, Vector2 pos);
+        IZone GenerateZoneWithID(int typeId, IZone parent, Vector2 pos, int ID);
+        INode GenerateNodeWithID(int typeId, IZone ownerZone, Vector2 pos, int ID);
+        public void SetIDGen(int zone, int node);
     }
 
     public static class NodeFactoryInitExtention
@@ -63,7 +66,21 @@ namespace Editor.NodeEditor
         int _nodeIdGen;
         public int NodeIdGen { get => _nodeIdGen++; set => _nodeIdGen = value; }
 
+        
         public INode GenerateNode(int typeId, IZone ownerZone, Vector2 pos)
+        {
+            INode res = CreateNode(typeId, ownerZone, pos);
+            AddNode(ownerZone.ID, res);
+            return res;
+        }
+        public INode GenerateNodeWithID(int typeId, IZone ownerZone, Vector2 pos, int ID)
+        {
+            INode res = CreateNode(typeId, ownerZone, pos);
+            (res as INodeBuilder).BuildID(ID);
+            AddNode(ownerZone.ID, res);
+            return res;
+        }
+        private INode CreateNode(int typeId, IZone ownerZone, Vector2 pos)
         {
             INode res = null;
             if (!nodeFactory.ContainsKey(typeId))
@@ -71,14 +88,12 @@ namespace Editor.NodeEditor
             else
             {
                 res = nodeFactory[typeId].Invoke(ownerZone, pos);
-                AddNode(ownerZone.ID, res);
             }
             return res;
         }
-
         private void AddNode(int parentId, INode node)
         { 
-            IZone zone = this.GetModel<IZoneModel>().FindNode(parentId).value;
+            IZone zone = this.GetModel<IZoneModel>().FindTreeNode(parentId).value;
             zone.Nodes.Add(node);
             this.GetModel<INodeModel>().Nodes.Add(node.ID, node);
         }
@@ -115,11 +130,17 @@ namespace Editor.NodeEditor
             AddZone(parent == null ? -1 : parent.ID, res);
             return res;
         }
-
+        public IZone GenerateZoneWithID(int typeId, IZone parent, Vector2 pos, int ID)
+        {
+            IZone res = zoneFactory[typeId].Invoke(parent, pos);
+            (res as IZoneBuilder).BuildID(ID);
+            AddZone(parent == null ? -1 : parent.ID, res);
+            return res;
+        }
         private void AddZone(int parentId, IZone zone)
         {
             IZoneModel model = this.GetModel<IZoneModel>();
-            ZoneTreeNode parentNode = model.FindNode(parentId);
+            ZoneTreeNode parentNode = model.FindTreeNode(parentId);
             if (parentNode == null)
                 model.Trees.Add(new ZoneTreeNode(zone));
             else
@@ -161,5 +182,11 @@ namespace Editor.NodeEditor
             base.OnDeinit();
         }
         #endregion
+
+        public void SetIDGen(int zone, int node)
+        {
+            ZoneIdGen = zone;
+            NodeIdGen = node;
+        }
     }
 }

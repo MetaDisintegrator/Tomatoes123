@@ -1,13 +1,16 @@
+using Game.Tool;
 using Microsoft.SqlServer.Server;
 using QFramework;
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
+using System.Linq;
 using UnityEditor;
 using UnityEngine;
 
 namespace Editor.NodeEditor
 {
-    public interface INode : IZoneContent, INodeBuilder
+    public interface INode : IZoneContent,IDiagramData
     {
         public int ID { get; }
         public E_SpecialNode SpecialType { get; set; }
@@ -22,10 +25,12 @@ namespace Editor.NodeEditor
         bool CheckLoop(INode outNode);
 
         void MoveUnknown();
-        
+
+        int IndexofPoint(IPoint point);
+        int IndexofItem(IItem item);
     }
 
-    public class Node : NodeBoxElement, INode
+    public class Node : NodeBoxElement, INode, INodeBuilder
     {
         static readonly float headOffset = 20;
         float currentBottom;
@@ -124,12 +129,16 @@ namespace Editor.NodeEditor
                     OwnerZone.Exit = this;
                     SecondZone = OwnerZone.Father;
                     break;
+                case E_SpecialNode.Trigger:
+                    OwnerZone.Trigger = this;
+                    break;
             }
             return this;
         }
 
         INodeBuilder INodeBuilder.BuildItem(IItem item)
         {
+            item.OwnerNode = this;
             item.RequirePoints(this);
             item.Width = Rect.width * 0.9f;
             Items.Add(item);
@@ -214,5 +223,38 @@ namespace Editor.NodeEditor
                 }
             }
         }
+
+        #region DiagramData
+        public void WriteDiagramData(FileStream fs)
+        {
+            //父区域ID
+            BinKit.Write(fs,false,OwnerZone.ID);
+            //pos
+            BinKit.Write(fs, false, Rect.position);
+            //节点类型
+            BinKit.Write(fs, false, TypeID);
+            //ID
+            BinKit.Write(fs, false, ID);
+            //特殊节点写入
+            switch (SpecialType)
+            {
+                case E_SpecialNode.Entrance:
+                case E_SpecialNode.Exit:
+                    List<IItem> dynamicItems = Items.Where(item => item.Dynamic).ToList();
+                    BinKit.WriteList(dynamicItems, fs, (item, fs) => BinKit.Write(fs, false, (int)item.Points[0].DataType));
+                    break;
+            }
+        }
+        public int IndexofPoint(IPoint point)
+        { 
+            if(point is InPoint) return InPoints.IndexOf(point);
+            if(point is OutPoint) return OutPoints.IndexOf(point);
+            return -1;
+        }
+        public int IndexofItem(IItem item)
+        { 
+            return Items.IndexOf(item);
+        }
+        #endregion
     }
 }

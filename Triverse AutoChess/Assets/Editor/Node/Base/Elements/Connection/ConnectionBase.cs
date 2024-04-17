@@ -1,12 +1,14 @@
+using Game.Tool;
 using QFramework;
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using UnityEditor;
 using UnityEngine;
 
 namespace Editor.NodeEditor
 {
-    public interface IConnect
+    public interface IConnect:IDiagramData
     {
         public OutPoint Start { get; }
         public InPoint End { get; }
@@ -37,6 +39,18 @@ namespace Editor.NodeEditor
                 2
                 );
         }
+
+        #region DiagramData
+        public void WriteDiagramData(FileStream fs)
+        {
+            //起点节点ID，索引
+            BinKit.Write(fs,false,Start.OwnerNode.ID);
+            BinKit.Write(fs, false, Start.OwnerNode.IndexofPoint(Start));
+            //终点节点ID，索引
+            BinKit.Write(fs, false, End.OwnerNode.ID);
+            BinKit.Write(fs, false, End.OwnerNode.IndexofPoint(End));
+        }
+        #endregion
     }
 }
 

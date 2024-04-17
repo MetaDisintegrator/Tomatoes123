@@ -18,9 +18,16 @@ namespace Editor.NodeEditor
             #region Point
             system.RegisterPointStyle(E_NodeData.Int, E_NodeDataScale.Single);
             system.RegisterPointStyle(E_NodeData.Float, E_NodeDataScale.Single);
-            system.RegisterPointStyle(E_NodeData.Bool, E_NodeDataScale.Multiple);
+            system.RegisterPointStyle(E_NodeData.Bool, E_NodeDataScale.Single);
+            system.RegisterPointStyle(E_NodeData.MapPoint, E_NodeDataScale.Single);
+            system.RegisterPointStyle(E_NodeData.MapArea, E_NodeDataScale.Single);
+            system.RegisterPointStyle(E_NodeData.Chess, E_NodeDataScale.Single);
+            system.RegisterPointStyle(E_NodeData.Projecticle, E_NodeDataScale.Single);
+            system.RegisterPointStyle(E_NodeData.IndividualData, E_NodeDataScale.Single);
             system.RegisterPointStyle(E_NodeData.UnKnown, E_NodeDataScale.Single);
-            
+
+            system.RegisterPointStyle(E_NodeData.Bool, E_NodeDataScale.Multiple);
+
             #endregion
 
             #region Connect

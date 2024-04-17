@@ -34,6 +34,7 @@ namespace Editor.NodeEditor
         None = 0,
         Entrance,
         CycleEntrance,
-        Exit
+        Exit,
+        Trigger
     }
 }

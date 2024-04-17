@@ -34,6 +34,12 @@ namespace Editor.NodeEditor
                 .BuildItem(item.GetSimpleItem(E_NodeData.Bool, "打破循环"))
                 .BuildPoint(new UnknowPoint())
                 , E_SpecialNode.Exit);
+            system.RegisterNode(-7,
+                builder =>
+                system.QBuildNode("测试扳机(受伤)", "").Invoke(builder)
+                .BuildItem(item.GetLabelItem("伤害来源"))
+                .BuildPoint(new OutPoint(E_NodeData.Chess, E_NodeDataScale.Single))
+                , E_SpecialNode.Trigger);
             #endregion
 
             system.RegisterNode(1,

@@ -19,6 +19,7 @@ namespace Game.Tool
                 { typeof(float), new FloatBinConverter() },
                 { typeof(bool), new BooleanBinConverter() },
                 { typeof(string), new StringBinConverter() },
+                { typeof(Vector2), new Vector2BinConverter() },
                 { typeof(AttrConfigData),new AttrConfigDataConverter() }
             };
             safeConverters = new Dictionary<Type, IBinConverter>()

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using UnityEditor;
 using UnityEngine;
 
@@ -11,6 +12,10 @@ namespace Editor.NodeEditor
         public static void Open()
         {
             DoOpenWindow("¼¼ÄÜ±à¼­Æ÷");
+        }
+        protected override void InitPath(IDiagramDirectoryModel model)
+        {
+            model.FilePath = Path.Combine(Application.dataPath, "Editor", "Data", "Skill");
         }
     }
 }
