@@ -9,4 +9,11 @@ namespace Game.Data.Runtime
     {
 
     }
+    public class BackpackRuntimeData : AbstractModel, IBackpackRuntimeData
+    {
+        protected override void OnInit()
+        {
+            throw new System.NotImplementedException();
+        }
+    }
 }

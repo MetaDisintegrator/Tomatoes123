@@ -10,13 +10,13 @@ namespace Game.Data.Runtime
     { 
         public bool HasSave { get; set; }
         public int CurrentFloor { get; set; }
-        public E_EventType CurrentEvent { get; set; }
+        public E_Occurance CurrentEvent { get; set; }
     }
     public class ProgressRuntime : AbstractModel, IProgressRuntimeData
     {
         public bool HasSave { get; set; }
         public int CurrentFloor { get; set; }
-        public E_EventType CurrentEvent { get; set; }
+        public E_Occurance CurrentEvent { get; set; }
 
         protected override void OnInit()
         {

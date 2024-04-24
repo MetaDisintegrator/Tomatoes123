@@ -3,13 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using Game.Enum.Main;
 using System.Linq;
+using Game.Node.Skill;
 
 namespace Game.Data.Config
 {
     /// <summary>
     /// 个体或化身配置
     /// </summary>
-    public interface ICharacterConfigData
+    public interface IChessConfigData
     {
         public E_Realm Realm { get; }
         public E_ChessRole defaultRole { get; }
@@ -17,6 +18,7 @@ namespace Game.Data.Config
         public string Description { get; }
         AttrConfigData GetAttrConfig(int lv = -1);
         public string ResPath { get; }
+        public string PrefabName { get; }
         public List<ISkillConfigData> Skills { get; }
     }
     /// <summary>
@@ -29,8 +31,8 @@ namespace Game.Data.Config
         /// </summary>
         public string Name { get; }
         public string Description { get; }
-        ICharacterConfigData GetAvatar(int tribeId);
-        ICharacterConfigData RandAvatar(E_Realm realm);
+        IChessConfigData GetAvatar(int tribeId);
+        IChessConfigData RandAvatar(E_Realm realm);
         ISkillConfigData RandWarpSkill();
     }
     /// <summary>
@@ -45,7 +47,7 @@ namespace Game.Data.Config
         /// 技能图标，可无
         /// </summary>
         public string ResPath { get; }
-        public string SOPath { get; }
+        public List<SkillResolver> SkillResolvers { get; set; }
     }
     /// <summary>
     /// 属性配置
@@ -70,7 +72,6 @@ namespace Game.Data.Config
         public string Name { get; }
         public string Description { get; }
         public string ResPath { get; }
-        public string SOPath { get; }
         AttrConfigData GetAttrConfig(int lv = -1);
         public List<ISkillConfigData> Skills { get; }
     }
@@ -79,8 +80,11 @@ namespace Game.Data.Config
     {
         public int lvBelong;
 
-        public float MaxHealth { get; set; }
+        AttrData attr;
 
+        public float MaxHealth { get => attr.MaxHealth; set => attr.MaxHealth = value; }
+
+        //待修改
         public float PhysicalResistance { get; set; }
 
         public float MagicalResistance { get; set; }
@@ -110,7 +114,7 @@ namespace Game.Data.Config
 
         public string ResPath { get; set; }
 
-        public string SOPath { get; set; }
+        public List<SkillResolver> SkillResolvers { get; set; }
     }
 
     public class WarpSkillConfigData : SkillConfigData, ISkillConfigData
@@ -118,7 +122,7 @@ namespace Game.Data.Config
         public float randWeight;
     }
 
-    public class AvatarConfigData : ICharacterConfigData
+    public class AvatarConfigData : IChessConfigData
     {
         public AttrConfigData attrConfig;
         public int Id;
@@ -129,6 +133,7 @@ namespace Game.Data.Config
         public string Name { get; set; }
         public string Description { get; set; }
         public string ResPath { get; set; }
+        public string PrefabName { get; set; }
         /// <summary>
         /// 读写只存ID
         /// </summary>
@@ -156,12 +161,12 @@ namespace Game.Data.Config
 
         public string Description { get; set; }
 
-        public ICharacterConfigData GetAvatar(int tribeId)
+        public IChessConfigData GetAvatar(int tribeId)
         {
             //加载，返回
             return default;
         }
-        public ICharacterConfigData RandAvatar(E_Realm realm)
+        public IChessConfigData RandAvatar(E_Realm realm)
         {
             float rand = Random.Range(0, avatarRand[realm].range);
             int id = avatarRand[realm].rand.Last().id;
@@ -195,7 +200,7 @@ namespace Game.Data.Config
         }
     }
 
-    public class IndividualConfigData : ICharacterConfigData
+    public class IndividualConfigData : IChessConfigData
     {
         public int id;
 
@@ -210,6 +215,7 @@ namespace Game.Data.Config
         public string Description { get; set; }
 
         public string ResPath { get; set; }
+        public string PrefabName { get; set; }
         /// <summary>
         /// 读写只存ID
         /// </summary>
@@ -229,7 +235,6 @@ namespace Game.Data.Config
         public string Name { get; set;}
         public string Description { get; set;}
         public string ResPath { get; set;}
-        public string SOPath { get; set;}
         public AttrConfigData GetAttrConfig(int lv = -1)
         { 
             return attrConfigs[lv-1];

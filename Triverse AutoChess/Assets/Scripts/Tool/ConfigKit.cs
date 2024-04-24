@@ -20,8 +20,8 @@ namespace Game.Tool
         #endregion
 
         static Dictionary<int, ITribeConfigData> tribes;
-        static Dictionary<int, ICharacterConfigData> individuals;
-        static Dictionary<int, ICharacterConfigData> avatars;
+        static Dictionary<int, IChessConfigData> individuals;
+        static Dictionary<int, IChessConfigData> avatars;
         static Dictionary<int, IGearConfigData> gears;
         static Dictionary<int, ISkillConfigData> warpSkills;
         static Dictionary<int, ISkillConfigData> skills;

@@ -20,6 +20,7 @@ namespace Game.Tool
                 { typeof(bool), new BooleanBinConverter() },
                 { typeof(string), new StringBinConverter() },
                 { typeof(Vector2), new Vector2BinConverter() },
+                { typeof(Pos), new PosBinConverter()},
                 { typeof(AttrConfigData),new AttrConfigDataConverter() }
             };
             safeConverters = new Dictionary<Type, IBinConverter>()

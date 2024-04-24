@@ -27,12 +27,18 @@ namespace Game.Enum.Main
     /// <summary>
     /// 事件类型
     /// </summary>
-    public enum E_EventType
+    public enum E_Occurance
     {
         None = 0,
         Battle = 1,
         Shop = 2,
         Inn = 3,
         Unique = 4,
+    }
+    public enum E_BattleSide
+    { 
+        None =0,
+        Player,
+        Enemy
     }
 }

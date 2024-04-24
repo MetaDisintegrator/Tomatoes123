@@ -28,12 +28,26 @@ namespace Editor.NodeEditor
             RegisterItem(E_NodeData.Int, (title) => new ItemInt(title), factories);
             RegisterItem(E_NodeData.Float, (title) => new ItemFloat(title), factories);
             RegisterItem(E_NodeData.Bool, (title) => new ItemBool(title), factories);
+            RegisterItem(E_NodeData.MapPoint, (title) => new ItemMapPoint(title), factories);
+            RegisterItem(E_NodeData.MapArea, (title) => new ItemMapArea(title), factories);
+            RegisterItem(E_NodeData.Projecticle, (title) => new ItemProjecticle(title), factories);
+            RegisterItem(E_NodeData.Chess, (title) => new ItemChess(title), factories);
+            RegisterItem(E_NodeData.IndividualData, (title) => new ItemIndividualData(title), factories);
+            RegisterItem(E_NodeData.String, (title) => new ItemString(title), factories);
+            RegisterItem(E_NodeData.Control, (title) => new ItemControl(title), factories);
             #endregion
 
             #region Repeater
             RegisterItem(E_NodeData.Int, (title) => new ItemIntRepeater(title), repeaterFactories);
             RegisterItem(E_NodeData.Float, (title) => new ItemFloatRepeater(title), repeaterFactories);
             RegisterItem(E_NodeData.Bool, (title) => new ItemBoolRepeater(title), repeaterFactories);
+            RegisterItem(E_NodeData.MapPoint, (title) => new ItemMapPointRepeater(title), repeaterFactories);
+            RegisterItem(E_NodeData.MapArea, (title) => new ItemMapAreaRepeater(title), repeaterFactories);
+            RegisterItem(E_NodeData.Projecticle, (title) => new ItemProjecticleRepeater(title), repeaterFactories);
+            RegisterItem(E_NodeData.Chess, (title) => new ItemChessRepeater(title), repeaterFactories);
+            RegisterItem(E_NodeData.IndividualData, (title) => new ItemIndividualDataRepeater(title), repeaterFactories);
+            RegisterItem(E_NodeData.String, (title) => new ItemStringRepeater(title), repeaterFactories);
+            RegisterItem(E_NodeData.Control, (title) => new ItemControlRepeater(title), repeaterFactories);
             #endregion
         }
         

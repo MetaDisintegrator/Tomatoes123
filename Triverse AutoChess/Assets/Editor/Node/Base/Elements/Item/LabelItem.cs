@@ -10,9 +10,6 @@ namespace Editor.NodeEditor
     public class LabelItem : Item
     {
         public LabelItem(string title) : base(title,20,20) { }
-
-        
-
         public override void RequirePoints(INodeBuilder builder)
         {
         }
@@ -28,6 +25,20 @@ namespace Editor.NodeEditor
         protected override void OnWriteDiagramData(FileStream fs)
         {
             return;
+        }
+    }
+
+    public class OutLabelItem : LabelItem
+    {
+        E_NodeData dataType;
+        public OutLabelItem(string title,E_NodeData dataType) : base(title)
+        {
+            this.dataType = dataType;
+        }
+        public override void RequirePoints(INodeBuilder builder)
+        {
+            base.RequirePoints(builder);
+            DoRequirePoint(builder, new OutPoint(dataType, E_NodeDataScale.Single));
         }
     }
 }

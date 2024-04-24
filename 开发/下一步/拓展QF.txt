@@ -1,0 +1,3 @@
+加入ArchitectureInstance，非单例类实现IArchitectur（完成）
+砍掉单例导致的Init不能调用（没有懒汉模式了），交由工厂负责。
+命令和查询的管理尽量交给对象池，并设法抽象这一过程。

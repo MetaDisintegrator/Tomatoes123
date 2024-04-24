@@ -18,7 +18,6 @@ namespace Game.Tool
             res.Name = BinKit.Read<string>(BA);
             res.Description = BinKit.Read<string>(BA);
             res.ResPath = BinKit.Read<string>(BA);
-            res.SOPath = BinKit.Read<string>(BA);
             return res;
         }
 
@@ -29,8 +28,7 @@ namespace Game.Tool
             BinKit.Write<string>(fs, false,
                 value.Name,
                 value.Description,
-                value.ResPath,
-                value.SOPath);
+                value.ResPath);
         }
     }
 
