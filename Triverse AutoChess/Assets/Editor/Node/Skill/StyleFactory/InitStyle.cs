@@ -25,6 +25,7 @@ namespace Editor.NodeEditor
             system.RegisterPointStyle(E_NodeData.Projecticle, E_NodeDataScale.Single);
             system.RegisterPointStyle(E_NodeData.IndividualData, E_NodeDataScale.Single);
             system.RegisterPointStyle(E_NodeData.String, E_NodeDataScale.Single);
+            system.RegisterPointStyle(E_NodeData.Damage, E_NodeDataScale.Single);
             system.RegisterPointStyle(E_NodeData.UnKnown, E_NodeDataScale.Single);
             system.RegisterPointStyle(E_NodeData.Control, E_NodeDataScale.Single);
 
@@ -57,6 +58,8 @@ namespace Editor.NodeEditor
             system.RegisterColor(E_NodeData.IndividualData, "#F7F7F7");
             //Control
             system.RegisterColor(E_NodeData.Control, "#04004A");
+            //Damage
+            system.RegisterColor(E_NodeData.Damage, "#760C00");
             #endregion
         }
     }

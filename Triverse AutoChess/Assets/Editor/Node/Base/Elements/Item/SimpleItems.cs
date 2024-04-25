@@ -151,8 +151,7 @@ namespace Editor.NodeEditor.Items
 
     public class ItemProjecticle : Item
     {
-        private int value;
-        public ItemProjecticle(string title) : base(title) { }
+        public ItemProjecticle(string title) : base(title,20,20) { }
 
         public override void RequirePoints(INodeBuilder builder)
         {
@@ -161,26 +160,23 @@ namespace Editor.NodeEditor.Items
 
         protected override void OnRender(bool connected)
         {
-            if (connected) return;
-            value = EditorGUILayout.DelayedIntField(new GUIContent("(战场ID)"), value);
         }
 
         #region DiagramData
         protected override void OnWriteDiagramData(FileStream fs)
         {
-            BinKit.Write(fs, false, value);
+            return;
         }
         public override void ReadDiagramData(ByteArray BA)
         {
-            value = BinKit.Read<int>(BA);
+            return;
         }
         #endregion
     }
 
     public class ItemChess : Item
     {
-        private int value;
-        public ItemChess(string title) : base(title) { }
+        public ItemChess(string title) : base(title,20,20) { }
 
         public override void RequirePoints(INodeBuilder builder)
         {
@@ -189,26 +185,21 @@ namespace Editor.NodeEditor.Items
 
         protected override void OnRender(bool connected)
         {
-            if (connected) return;
-            value = EditorGUILayout.DelayedIntField(new GUIContent("(战场ID)"), value);
         }
 
         #region DiagramData
         protected override void OnWriteDiagramData(FileStream fs)
         {
-            BinKit.Write(fs, false, value);
         }
         public override void ReadDiagramData(ByteArray BA)
         {
-            value = BinKit.Read<int>(BA);
         }
         #endregion
     }
 
     public class ItemIndividualData : Item
     {
-        private int value;
-        public ItemIndividualData(string title) : base(title) { }
+        public ItemIndividualData(string title) : base(title, 20, 20) { }
 
         public override void RequirePoints(INodeBuilder builder)
         {
@@ -217,18 +208,14 @@ namespace Editor.NodeEditor.Items
 
         protected override void OnRender(bool connected)
         {
-            if (connected) return;
-            value = EditorGUILayout.DelayedIntField(new GUIContent("(个体ID)"), value);
         }
 
         #region DiagramData
         protected override void OnWriteDiagramData(FileStream fs)
         {
-            BinKit.Write(fs, false, value);
         }
         public override void ReadDiagramData(ByteArray BA)
         {
-            value = BinKit.Read<int>(BA);
         }
         #endregion
     }

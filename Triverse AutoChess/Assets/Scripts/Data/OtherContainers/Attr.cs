@@ -21,8 +21,12 @@ namespace Game.Data
         public float CritRate { get; set; }
 
         public float CritMultiplier { get; set; }
-
+        /// <summary>
+        /// ÉÁ±ÜÂÊ
+        /// </summary>
         public float EvationRate { get; set; }
+
+        public readonly float Speed = 5f;
     }
 }
 

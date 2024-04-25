@@ -20,6 +20,7 @@ namespace QFramework
         public float A;
         public float B;
         public float Duration;
+        public Func<float> DurationTimeFactory;
         public Action<float> OnLerp;
         public Action OnLerpFinish;
 
@@ -27,18 +28,22 @@ namespace QFramework
 
         public static Lerp Allocate(float a, float b, float duration, Action<float> onLerp = null,Action onLerpFinish = null)
         {
+            return Allocate(a, b, () => duration, onLerp, onLerpFinish);
+        }
+        public static Lerp Allocate(float a, float b, Func<float> durationFactory, Action<float> onLerp = null, Action onLerpFinish = null)
+        {
             var retNode = mPool.Allocate();
             retNode.ActionID = ActionKit.ID_GENERATOR++;
             retNode.Deinited = false;
             retNode.Reset();
             retNode.A = a;
             retNode.B = b;
-            retNode.Duration = duration;
+            retNode.DurationTimeFactory = durationFactory;
             retNode.OnLerp = onLerp;
             retNode.OnLerpFinish = onLerpFinish;
             return retNode;
         }
-        
+
         public bool Paused { get; set; }
         public void Reset()
         {
@@ -64,7 +69,8 @@ namespace QFramework
         {
             mCurrentTime = 0.0f;
             OnLerp?.Invoke(Mathf.Lerp(A, B, 0));
-
+            if(DurationTimeFactory!=null)
+                Duration = DurationTimeFactory();
         }
 
         public void OnExecute(float dt)
@@ -95,7 +101,12 @@ namespace QFramework
         {
             return self.Append(QFramework.Lerp.Allocate(a,b,duration,onLerp,onLerpFinish));
         }
-        
+
+        public static ISequence Lerp(this ISequence self, float a, float b, Func<float> durationFactory, Action<float> onLerp = null, Action onLerpFinish = null)
+        {
+            return self.Append(QFramework.Lerp.Allocate(a, b, durationFactory, onLerp, onLerpFinish));
+        }
+
         public static ISequence Lerp01(this ISequence self, float duration,Action<float> onLerp = null,Action onLerpFinish = null)
         {
             return self.Append(QFramework.Lerp.Allocate(0,1,duration,onLerp,onLerpFinish));

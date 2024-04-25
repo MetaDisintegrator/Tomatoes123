@@ -14,6 +14,7 @@ namespace Game
             RegisterSystem<IChessFactorySystem>(new ChessFactorySystem());
             RegisterSystem<IChessSystem>(new ChessSystem());
             RegisterSystem<IBattlefieldSystem>(new BattlefieldSystem());
+            RegisterSystem<IBattleManageSystem>(new BattleManageSystem());
 
             RegisterUtility<IGetBattlefieldUtility>(new TesterGetBattlefieldUtility());
         }

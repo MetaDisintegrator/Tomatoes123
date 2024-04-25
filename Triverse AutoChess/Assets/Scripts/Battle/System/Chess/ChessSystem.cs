@@ -26,6 +26,9 @@ namespace Game.Battle.System
 
         public void AddChess(E_Realm realm, BattleChess chess)
         {
+            //确定棋子实际所在的界
+            chess.Realm = realm;
+            //添加到队列
             chessesMap[realm].Add(chess);
         }
 

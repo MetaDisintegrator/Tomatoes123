@@ -22,6 +22,7 @@ namespace Editor.NodeEditor
         Chess,
         IndividualData,
         String,
+        Damage,
         UnKnown
     }
     public enum E_NodeDataScale

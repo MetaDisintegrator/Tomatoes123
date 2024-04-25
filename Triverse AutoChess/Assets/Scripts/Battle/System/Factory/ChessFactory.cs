@@ -3,6 +3,7 @@ using Game.Battle.Chess.AI;
 using Game.Battle.Chess.Anim;
 using Game.Battle.Chess.Data;
 using Game.Battle.Chess.Event;
+using Game.Battle.Chess.Move;
 using Game.Data.Profile;
 using Game.Enum.Main;
 using QAssetBundle;
@@ -33,9 +34,12 @@ namespace Game.Battle
             //初步创建对象
             chess = new BattleChess();
             InitChess(chess);
+            chess.MakeSureArchitecture();
             //对象与GO相关联
             chess.SetChess(chessGO);
+            //信息传递
             chess.Side = side;
+            chess.Profile = profile;
             //完成依赖GO的初始化工作
             chess.SendEvent(new EventChessInit(chessGO));
             chess.SendEvent(new EventLateChessInit());
@@ -44,14 +48,16 @@ namespace Game.Battle
 
         private void InitChess(BattleChess chess)
         {
-            chess.MakeSureArchitecture();
-
             chess.RegisterSystem<IChessNavSystem>(new ChessNavSystem());
             chess.RegisterSystem<IChessAnimSystem>(new ChessAnimSystem());
             chess.RegisterSystem<IChessMonoSystem>(new ChessMonoSystem());
             chess.RegisterSystem<IChessFSMSystem>(new ChessFSMSystem());
+            chess.RegisterSystem<IChessMoveSystem>(new ChessMoveSystem());
+            chess.RegisterSystem<IBattleFieldDataSystem>(new BattleFieldDataSystem());
 
             chess.RegisterModel<IBattleChessDataModel>(new BattleChessDataModel());
+
+            chess.RegisterUtility<IChessNavUtility>(new ChessNavUtility());
         }
 
         protected override void OnInit()

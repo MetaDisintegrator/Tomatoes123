@@ -29,4 +29,9 @@ public struct Pos
     {
         return new Pos(a.x + b.x, a.y + b.y);
     }
+
+    public override string ToString()
+    {
+        return $"({x},{y})";
+    }
 }

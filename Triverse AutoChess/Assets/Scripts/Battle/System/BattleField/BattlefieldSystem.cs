@@ -32,7 +32,8 @@ namespace Game.Battle
         public BattlePoint[,] grid;
         public BattlePoint GetPoint(Pos pos)
         {
-            if (!pos.InRange(new Pos(0,0),new Pos(grid.GetLength(0),grid.GetLength(1))))
+            Pos max = new Pos(grid.GetLength(0) - 1, grid.GetLength(1) - 1);
+            if (!pos.InRange(new Pos(0,0),max))
                 return null;
             return grid[pos.x, pos.y];
         }
